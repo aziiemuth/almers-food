@@ -29,7 +29,7 @@ export default function ClientLayout({ children }) {
         <Footer />
         <ScrollToTop />
         <Toaster
-          position="bottom-right"
+          position="top-center"
           toastOptions={{
             style: {
               fontFamily: "'Poppins', sans-serif",

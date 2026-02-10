@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import styled from 'styled-components';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Sun, Moon, Menu, X } from 'lucide-react';
 import useThemeStore from '@/store/themeStore';
 
@@ -141,7 +141,7 @@ const MenuButton = styled(motion.button)`
   }
 `;
 
-const MobileOverlay = styled(motion.div)`
+const MobileOverlay = styled.div`
   position: fixed;
   top: 0;
   left: 0;
@@ -149,9 +149,12 @@ const MobileOverlay = styled(motion.div)`
   bottom: 0;
   background: ${({ theme }) => theme.colors.overlay};
   z-index: 998;
+  opacity: ${({ $open }) => ($open ? 1 : 0)};
+  pointer-events: ${({ $open }) => ($open ? 'auto' : 'none')};
+  transition: opacity 0.3s ease;
 `;
 
-const MobileDrawer = styled(motion.div)`
+const MobileDrawer = styled.div`
   position: fixed;
   top: 0;
   right: 0;
@@ -163,6 +166,8 @@ const MobileDrawer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   box-shadow: -4px 0 30px ${({ theme }) => theme.colors.shadowMd};
+  transform: translateX(${({ $open }) => ($open ? '0' : '100%')});
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 `;
 
 const MobileDrawerHeader = styled.div`
@@ -290,52 +295,25 @@ export default function Navbar() {
         </NavContainer>
       </Nav>
 
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            key="mobile-menu"
-            initial="closed"
-            animate="open"
-            exit="closed"
+      <MobileOverlay $open={mobileOpen} onClick={() => setMobileOpen(false)} />
+      <MobileDrawer $open={mobileOpen}>
+        <MobileDrawerHeader>
+          <MobileDrawerBrand>AlmersFood</MobileDrawerBrand>
+          <CloseButton
+            as={motion.button}
+            onClick={() => setMobileOpen(false)}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
           >
-            <MobileOverlay
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setMobileOpen(false)}
-            />
-            <MobileDrawer
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            >
-              <MobileDrawerHeader>
-                <MobileDrawerBrand>AlmersFood</MobileDrawerBrand>
-                <CloseButton
-                  onClick={() => setMobileOpen(false)}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <X size={18} />
-                </CloseButton>
-              </MobileDrawerHeader>
-              {navItems.map((item, i) => (
-                <motion.div
-                  key={item.href}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.1 + i * 0.05 }}
-                >
-                  <MobileNavLink href={item.href} $active={pathname === item.href} onClick={closeMobile}>
-                    {item.label}
-                  </MobileNavLink>
-                </motion.div>
-              ))}
-            </MobileDrawer>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            <X size={18} />
+          </CloseButton>
+        </MobileDrawerHeader>
+        {navItems.map((item) => (
+          <MobileNavLink key={item.href} href={item.href} $active={pathname === item.href} onClick={closeMobile}>
+            {item.label}
+          </MobileNavLink>
+        ))}
+      </MobileDrawer>
     </>
   );
 }
