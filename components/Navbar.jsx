@@ -292,7 +292,12 @@ export default function Navbar() {
 
       <AnimatePresence>
         {mobileOpen && (
-          <>
+          <motion.div
+            key="mobile-menu"
+            initial="closed"
+            animate="open"
+            exit="closed"
+          >
             <MobileOverlay
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -328,7 +333,7 @@ export default function Navbar() {
                 </motion.div>
               ))}
             </MobileDrawer>
-          </>
+          </motion.div>
         )}
       </AnimatePresence>
     </>
