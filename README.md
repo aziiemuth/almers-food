@@ -1,36 +1,98 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Almers Food - Frozen Food Website
 
-## Getting Started
+Website modern untuk brand frozen food **Almers Food**. Dibangun dengan Next.js, Styled Components, dan berbagai library modern.
 
-First, run the development server:
+## Tech Stack
+
+- **Framework:** Next.js 16 (App Router)
+- **Styling:** Styled Components
+- **State Management:** Zustand
+- **Animasi:** Framer Motion
+- **Slider:** Swiper
+- **Icons:** Lucide React, React Icons
+- **Notifikasi:** Sonner
+- **Loading:** React Loading Skeleton
+
+## Halaman
+
+| Route      | Deskripsi                                                  |
+| ---------- | ---------------------------------------------------------- |
+| `/`        | Beranda — Hero slider, fitur, produk unggulan, testimonial |
+| `/tentang` | Tentang Kami — Cerita brand, visi, komitmen kualitas       |
+| `/review`  | Review — Testimoni pelanggan                               |
+| `/katalog` | Katalog — Produk, keranjang, checkout via WhatsApp         |
+
+## Instalasi
+
+### 1. Clone / Download
+
+```bash
+git clone <repo-url>
+cd almersfood
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Jalankan Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Buka [http://localhost:3000](http://localhost:3000) di browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 4. Build untuk Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Struktur Folder
 
-To learn more about Next.js, take a look at the following resources:
+```
+almersfood/
+├── app/
+│   ├── layout.js          # Root layout (font, SSR registry)
+│   ├── globals.css         # Global CSS reset
+│   ├── page.js             # Beranda
+│   ├── tentang/page.js     # Tentang Kami
+│   ├── review/page.js      # Review
+│   └── katalog/page.js     # Katalog + Cart
+├── components/
+│   ├── Navbar.jsx          # Navigasi sticky + mobile drawer
+│   ├── Footer.jsx          # Footer dengan kontak & link
+│   ├── OrderModal.jsx      # Modal order produk satuan
+│   ├── AnimatedSection.jsx # Wrapper animasi scroll
+│   ├── ScrollToTop.jsx     # Tombol scroll ke atas
+│   ├── ClientLayout.jsx    # Layout wrapper (theme, navbar, footer)
+│   └── ThemeProviderWrapper.jsx
+├── data/
+│   └── products.js         # Data produk & kategori
+├── lib/
+│   ├── theme.js            # Light & dark theme
+│   ├── registry.js         # Styled Components SSR
+│   ├── formatRupiah.js     # Format mata uang Rupiah
+│   └── whatsapp.js         # Generator pesan WhatsApp
+├── store/
+│   ├── cartStore.js        # Zustand cart state
+│   └── themeStore.js       # Zustand theme toggle
+└── public/
+    └── foto/               # Gambar produk & slider
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Konfigurasi
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Nomor WhatsApp:** Edit `WA_NUMBER` di `lib/whatsapp.js`
+- **Produk:** Edit `data/products.js`
+- **Warna tema:** Edit `lib/theme.js`
+- **Foto produk:** Taruh di `public/foto/`
 
-## Deploy on Vercel
+## Requirements
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Node.js 18+
+- npm 9+
