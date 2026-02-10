@@ -167,7 +167,9 @@ const MobileDrawer = styled.div`
   flex-direction: column;
   box-shadow: -4px 0 30px ${({ theme }) => theme.colors.shadowMd};
   transform: translateX(${({ $open }) => ($open ? '0' : '100%')});
-  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  visibility: ${({ $open }) => ($open ? 'visible' : 'hidden')};
+  pointer-events: ${({ $open }) => ($open ? 'auto' : 'none')};
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.35s;
 `;
 
 const MobileDrawerHeader = styled.div`
@@ -284,7 +286,7 @@ export default function Navbar() {
               {mode === 'light' ? <Moon size={18} /> : <Sun size={18} />}
             </ThemeToggle>
             <MenuButton
-              onClick={() => setMobileOpen(true)}
+              onClick={() => setMobileOpen(!mobileOpen)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               aria-label="Open menu"
