@@ -5,9 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { Sun, Moon, X } from 'lucide-react';
-import Image from 'next/image';
-
+import { Sun, Moon, X, Menu } from 'lucide-react';
 import useThemeStore from '@/store/themeStore';
 
 const Nav = styled(motion.nav)`
@@ -293,7 +291,7 @@ export default function Navbar() {
               whileTap={{ scale: 0.95 }}
               aria-label="Open menu"
             >
-              <Image src="/menu.svg" alt="Menu" width={24} height={24} />
+              <Menu size={24} />
             </MenuButton>
           </NavActions>
         </NavContainer>
