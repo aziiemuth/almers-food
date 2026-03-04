@@ -494,6 +494,52 @@ const SeoLink = styled.a`
   }
 `;
 
+const MapWrapper = styled.div`
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid ${({ theme }) => theme.colors.border};
+  box-shadow: 0 8px 30px ${({ theme }) => theme.colors.shadow};
+  aspect-ratio: 4 / 3;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 12px 40px ${({ theme }) => theme.colors.shadowMd};
+  }
+
+  @media (max-width: 768px) {
+    aspect-ratio: 16 / 9;
+  }
+`;
+
+const ViewAllWrapper = styled.div`
+  text-align: center;
+  margin-top: 40px;
+`;
+
+const ViewAllButton = styled(motion(Link))`
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  background: transparent;
+  border: 2px solid ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.primary};
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 18px;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.textOnPrimary};
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px ${({ theme }) => theme.colors.shadow};
+  }
+`;
+
 /* ===== CONTACT CTA ===== */
 const ContactCTA = styled.section`
   padding: 60px 24px;
@@ -620,7 +666,7 @@ export default function HomePage() {
       {/* FEATURES */}
       <Section>
         <AnimatedSection>
-          <SectionTitle>Kenapa Pilih Frozen Food Almers Food Banyuwangi?</SectionTitle>
+          <SectionTitle>Kenapa Pilih Almers Food Banyuwangi?</SectionTitle>
           <SectionSubtitle>
             Frozen food rumahan yang dibuat sepenuh hati di Banyuwangi — dengan standar kebersihan, kehalalan, dan rasa yang konsisten.
           </SectionSubtitle>
@@ -643,9 +689,9 @@ export default function HomePage() {
       {/* FEATURED PRODUCTS */}
       <Section>
         <AnimatedSection>
-          <SectionTitle>Produk Frozen Food Unggulan Almers Food Banyuwangi</SectionTitle>
+          <SectionTitle>Produk Makanan Unggulan Almers Food Banyuwangi</SectionTitle>
           <SectionSubtitle>
-            Pilihan terbaik dari toko frozen food Almers Food Banyuwangi yang paling disukai pelanggan kami — siap masak, siap dinikmati.
+            Pilihan terbaik dari toko frozen, Almers Food Banyuwangi yang paling disukai pelanggan kami — siap masak, siap dinikmati.
           </SectionSubtitle>
         </AnimatedSection>
         <ProductsGrid>
@@ -678,6 +724,18 @@ export default function HomePage() {
             </AnimatedSection>
           ))}
         </ProductsGrid>
+        <AnimatedSection delay={0.3}>
+          <ViewAllWrapper>
+            <ViewAllButton
+              href="/katalog"
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+            >
+              <ShoppingBag size={17} />
+              Lihat Semua Produk di Katalog
+            </ViewAllButton>
+          </ViewAllWrapper>
+        </AnimatedSection>
       </Section>
 
       {/* WHY ALMERS */}
@@ -763,30 +821,22 @@ export default function HomePage() {
           </AnimatedSection>
           <AnimatedSection delay={0.2}>
             <SeoBlock>
-              <SeoBlockTitle>Cara Order & Informasi Toko</SeoBlockTitle>
-              <SeoInfoList>
-                <SeoInfoItem>
-                  <strong>WhatsApp:</strong>&nbsp;
-                  <SeoLink href="https://wa.me/6287806554701" target="_blank" rel="noopener noreferrer">
-                    0878-0655-4701
-                  </SeoLink>
-                </SeoInfoItem>
-                <SeoInfoItem>
-                  <strong>Lokasi:</strong>&nbsp;Jl. Belitung No.65, Lateng, Banyuwangi, Jawa Timur 68413
-                </SeoInfoItem>
-                <SeoInfoItem>
-                  <strong>Jam Buka:</strong>&nbsp;Setiap hari, 08.00 – 21.00 WIB
-                </SeoInfoItem>
-                <SeoInfoItem>
-                  <strong>Layanan Pengiriman:</strong>&nbsp;Banyuwangi & seluruh Indonesia (COD tersedia)
-                </SeoInfoItem>
-                <SeoInfoItem>
-                  <strong>Produk Tersedia:</strong>&nbsp;Roti Maryam, Pastel, Kroket, Samosa, Brota, Lumpur Kenari
-                </SeoInfoItem>
-                <SeoInfoItem>
-                  <strong>Harga Mulai:</strong>&nbsp;Rp 15.000 — terjangkau untuk semua kalangan
-                </SeoInfoItem>
-              </SeoInfoList>
+              <SeoBlockTitle>Temukan Kami di Google Maps</SeoBlockTitle>
+              <SeoBlockText>
+                Kunjungi langsung toko kami di <strong>Jl. Belitung No.65, Lateng, Banyuwangi</strong>. Buka setiap hari 08.00–21.00 WIB.
+              </SeoBlockText>
+              <MapWrapper>
+                <iframe
+                  src="https://maps.google.com/maps?q=-8.201557,114.378705&hl=id&z=17&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0, display: 'block' }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Lokasi Almers Food Banyuwangi di Google Maps"
+                />
+              </MapWrapper>
             </SeoBlock>
           </AnimatedSection>
         </SeoGrid>

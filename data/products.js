@@ -91,4 +91,4 @@ export const products = [
 
 export const categories = ['Semua', 'Roti', 'Gorengan', 'Snack'];
 
-export const featuredProductIds = [1, 2, 3, 4, 6, 7];
+export const featuredProductIds = [1, 3, 4];

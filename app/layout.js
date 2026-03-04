@@ -94,6 +94,9 @@ export const metadata = {
       'max-snippet': -1,
     },
   },
+  verification: {
+    google: 'jz_P257ZLIAhDUsXhwB_6RkLAvpiDExfsxjpLKUyMHM',
+  },
   other: {
     'geo.region': 'ID-JI',
     'geo.placename': 'Banyuwangi, Jawa Timur',

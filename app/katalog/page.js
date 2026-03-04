@@ -625,6 +625,41 @@ const SkeletonCard = styled.div`
   overflow: hidden;
 `;
 
+const ShippingInfoBox = styled.div`
+  background: ${({ theme }) => theme.colors.badgeBg};
+  border: 1px solid ${({ theme }) => theme.colors.border};
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+`;
+
+const ShippingInfoRow = styled.div`
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.78rem;
+  color: ${({ theme }) => theme.colors.textSecondary};
+  line-height: 1.5;
+
+  span.icon {
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  strong {
+    color: ${({ theme }) => theme.colors.text};
+  }
+
+  a {
+    color: #25D366;
+    font-weight: 600;
+    text-decoration: none;
+  }
+`;
+
 export default function KatalogPage() {
   const [search, setSearch] = useState('');
   const [activeCategory, setActiveCategory] = useState('Semua');
@@ -780,12 +815,26 @@ export default function KatalogPage() {
                   onChange={(e) => setCheckoutMethod(e.target.value)}
                 >
                   <option>Ambil di tempat</option>
-                  <option>Delivery</option>
-                  <option>Kirim luar kota</option>
+                  <option>Delivery (Banyuwangi Kota - Gratis)</option>
+                  <option>Kirim Luar Kota (diskusi via WA)</option>
                 </Select>
                 <ChevronDown size={16} />
               </SelectWrapper>
             </FormGroup>
+            <ShippingInfoBox>
+              <ShippingInfoRow>
+                <span className="icon">🟢</span>
+                <span><strong>Banyuwangi Kota</strong> — <strong style={{color:'#25D366'}}>Gratis ongkir!</strong></span>
+              </ShippingInfoRow>
+              <ShippingInfoRow>
+                <span className="icon">📦</span>
+                <span><strong>Luar Kota</strong> — Ongkos kirim dibicarakan lebih lanjut via WhatsApp sesuai tujuan dan ekspedisi.</span>
+              </ShippingInfoRow>
+              <ShippingInfoRow>
+                <span className="icon">💬</span>
+                <span>Ada pertanyaan? <a href="https://wa.me/6287806554701" target="_blank" rel="noopener noreferrer">Chat WhatsApp kami</a></span>
+              </ShippingInfoRow>
+            </ShippingInfoBox>
             <CheckoutButton
               onClick={handleCheckout}
               whileHover={{ scale: 1.02 }}
