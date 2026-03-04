@@ -415,6 +415,85 @@ const TestimonialsSection = styled.section`
   }
 `;
 
+/* ===== SEO INFO SECTION ===== */
+const SeoSection = styled.section`
+  padding: 70px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    padding: 50px 16px;
+  }
+`;
+
+const SeoGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+  margin-top: 40px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+`;
+
+const SeoBlock = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+`;
+
+const SeoBlockTitle = styled.h3`
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: ${({ theme }) => theme.colors.text};
+`;
+
+const SeoBlockText = styled.p`
+  font-size: 0.9rem;
+  color: ${({ theme }) => theme.colors.textSecondary};
+  line-height: 1.8;
+`;
+
+const SeoInfoList = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+`;
+
+const SeoInfoItem = styled.li`
+  font-size: 0.9rem;
+  color: ${({ theme }) => theme.colors.textSecondary};
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.6;
+
+  &::before {
+    content: '✓';
+    color: ${({ theme }) => theme.colors.primary};
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+`;
+
+const SeoLink = styled.a`
+  color: ${({ theme }) => theme.colors.primary};
+  text-decoration: none;
+  font-weight: 600;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
 /* ===== CONTACT CTA ===== */
 const ContactCTA = styled.section`
   padding: 60px 24px;
@@ -541,9 +620,9 @@ export default function HomePage() {
       {/* FEATURES */}
       <Section>
         <AnimatedSection>
-          <SectionTitle>Kenapa Pilih Almers Food?</SectionTitle>
+          <SectionTitle>Kenapa Pilih Frozen Food Almers Food Banyuwangi?</SectionTitle>
           <SectionSubtitle>
-            Frozen food yang dibuat sepenuh hati, dengan standar kebersihan dan rasa yang konsisten.
+            Frozen food rumahan yang dibuat sepenuh hati di Banyuwangi — dengan standar kebersihan, kehalalan, dan rasa yang konsisten.
           </SectionSubtitle>
         </AnimatedSection>
         <FeaturesGrid>
@@ -564,9 +643,9 @@ export default function HomePage() {
       {/* FEATURED PRODUCTS */}
       <Section>
         <AnimatedSection>
-          <SectionTitle>Produk Unggulan</SectionTitle>
+          <SectionTitle>Produk Frozen Food Unggulan Almers Food Banyuwangi</SectionTitle>
           <SectionSubtitle>
-            Pilihan terbaik dari Almers Food yang paling disukai pelanggan kami.
+            Pilihan terbaik dari toko frozen food Almers Food Banyuwangi yang paling disukai pelanggan kami — siap masak, siap dinikmati.
           </SectionSubtitle>
         </AnimatedSection>
         <ProductsGrid>
@@ -605,12 +684,13 @@ export default function HomePage() {
       <WhySection>
         <WhyContent>
           <AnimatedSection>
-            <SectionTitle>Kenapa Almers Food?</SectionTitle>
+            <SectionTitle>Toko Frozen Food Banyuwangi Terpercaya</SectionTitle>
             <WhyText>
-              Almers Food dibuat untuk kamu yang mau makan enak tanpa ribet.
-              Tinggal goreng atau panggang, aromanya langsung bikin lapar.
-              Cocok buat anak kos, ibu rumah tangga, sampai bekal kerja.
-              Semua produk kami dibuat dengan standar bersih dan cita rasa yang konsisten.
+              <strong>Almers Food</strong> adalah toko frozen food di <strong>Banyuwangi</strong> yang hadir untuk kamu yang ingin makan enak tanpa ribet.
+              Semua produk kami dibuat secara homemade — mulai dari Roti Maryam, Pastel, Kroket, hingga Samosa — dengan bahan segar pilihan,
+              standar kebersihan tinggi, dan cita rasa yang konsisten di setiap batch.
+              Cocok untuk anak kos, ibu rumah tangga, bekal kerja, hingga stok camilan keluarga.
+              Kami juga melayani pengiriman frozen food ke luar kota Banyuwangi ke seluruh Indonesia dengan packaging khusus agar produk tetap aman dan segar saat tiba.
             </WhyText>
           </AnimatedSection>
         </WhyContent>
@@ -657,12 +737,67 @@ export default function HomePage() {
         </AnimatedSection>
       </TestimonialsSection>
 
+      {/* SEO INFO SECTION */}
+      <SeoSection>
+        <AnimatedSection>
+          <SectionTitle>Almers Food Banyuwangi — Informasi Lengkap</SectionTitle>
+          <SectionSubtitle>
+            Toko frozen food terlengkap di Banyuwangi. Pesan sekarang via WhatsApp, kirim ke seluruh Indonesia.
+          </SectionSubtitle>
+        </AnimatedSection>
+        <SeoGrid>
+          <AnimatedSection delay={0.1}>
+            <SeoBlock>
+              <SeoBlockTitle>Tentang Almers Food</SeoBlockTitle>
+              <SeoBlockText>
+                Almers Food adalah produsen dan toko frozen food rumahan yang berlokasi di
+                <strong> Banyuwangi, Jawa Timur</strong>. Kami menyediakan berbagai produk makanan beku berkualitas
+                dengan harga terjangkau — dari Roti Maryam, Pastel, Kroket, Samosa, Brota, hingga Lumpur Kenari.
+                Semua produk dibuat secara homemade, higienis, dan halal.
+              </SeoBlockText>
+              <SeoBlockText>
+                Butuh <strong>frozen food di Banyuwangi</strong>? Almers Food siap melayani pembelian langsung
+                maupun pengiriman ke seluruh Indonesia dengan packaging khusus yang aman.
+              </SeoBlockText>
+            </SeoBlock>
+          </AnimatedSection>
+          <AnimatedSection delay={0.2}>
+            <SeoBlock>
+              <SeoBlockTitle>Cara Order & Informasi Toko</SeoBlockTitle>
+              <SeoInfoList>
+                <SeoInfoItem>
+                  <strong>WhatsApp:</strong>&nbsp;
+                  <SeoLink href="https://wa.me/6287806554701" target="_blank" rel="noopener noreferrer">
+                    0878-0655-4701
+                  </SeoLink>
+                </SeoInfoItem>
+                <SeoInfoItem>
+                  <strong>Lokasi:</strong>&nbsp;Jl. Belitung No.65, Lateng, Banyuwangi, Jawa Timur 68413
+                </SeoInfoItem>
+                <SeoInfoItem>
+                  <strong>Jam Buka:</strong>&nbsp;Setiap hari, 08.00 – 21.00 WIB
+                </SeoInfoItem>
+                <SeoInfoItem>
+                  <strong>Layanan Pengiriman:</strong>&nbsp;Banyuwangi & seluruh Indonesia (COD tersedia)
+                </SeoInfoItem>
+                <SeoInfoItem>
+                  <strong>Produk Tersedia:</strong>&nbsp;Roti Maryam, Pastel, Kroket, Samosa, Brota, Lumpur Kenari
+                </SeoInfoItem>
+                <SeoInfoItem>
+                  <strong>Harga Mulai:</strong>&nbsp;Rp 15.000 — terjangkau untuk semua kalangan
+                </SeoInfoItem>
+              </SeoInfoList>
+            </SeoBlock>
+          </AnimatedSection>
+        </SeoGrid>
+      </SeoSection>
+
       {/* CONTACT CTA */}
       <ContactCTA>
         <AnimatedSection>
-          <SectionTitle>Tertarik? Yuk, Order Sekarang!</SectionTitle>
+          <SectionTitle>Pesan Frozen Food Banyuwangi Sekarang!</SectionTitle>
           <SectionSubtitle>
-            Langsung chat kami di WhatsApp untuk pesan atau tanya-tanya dulu.
+            Chat langsung via WhatsApp untuk order atau tanya-tanya produk Almers Food Banyuwangi.
           </SectionSubtitle>
           <CTAButton
             href="https://wa.me/6287806554701"

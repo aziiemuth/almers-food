@@ -2,6 +2,7 @@ import { Poppins, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import StyledComponentsRegistry from '@/lib/registry';
 import ClientLayout from '@/components/ClientLayout';
+import JsonLd from '@/components/JsonLd';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -18,27 +19,38 @@ const playfair = Playfair_Display({
 });
 
 export const metadata = {
+  // metadataBase wajib agar OG/Twitter image URL menjadi absolut
+  metadataBase: new URL('https://almersfood.vercel.app'),
   title: {
-    default: 'Almers Food — Frozen Food Banyuwangi | Praktis, Rasa Berkelas',
+    default: 'Almers Food Banyuwangi | Toko Frozen Food Terlengkap di Banyuwangi',
     template: '%s | Almers Food Banyuwangi',
   },
   description:
-    'Pusat frozen food Banyuwangi premium. Jual Roti Maryam, Pastel, Kroket, Samosa, dan aneka snack beku. Home made, higienis, halal, dan siap kirim ke seluruh Indonesia.',
+    'Almers Food adalah toko frozen food di Banyuwangi yang menyediakan berbagai produk makanan beku berkualitas dengan harga terjangkau. Jual Roti Maryam, Pastel, Kroket, Samosa, dan aneka snack beku. Home made, higienis, halal, dan siap kirim ke seluruh Indonesia.',
   keywords: [
+    'almers food',
+    'almers food banyuwangi',
     'frozen food banyuwangi',
+    'toko frozen food banyuwangi',
     'jual frozen food banyuwangi',
+    'frozen food murah banyuwangi',
     'frozen food rumahan banyuwangi',
+    'makanan beku banyuwangi',
     'roti maryam banyuwangi',
     'pastel frozen banyuwangi',
     'kroket frozen banyuwangi',
     'samosa frozen banyuwangi',
+    'snack beku banyuwangi',
     'kuliner banyuwangi',
     'oleh-oleh banyuwangi',
-    'almers food',
+    'pesan frozen food banyuwangi',
   ],
   authors: [{ name: 'Almers Food' }],
   creator: 'Almers Food',
   publisher: 'Almers Food',
+  alternates: {
+    canonical: 'https://almersfood.vercel.app',
+  },
   formatDetection: {
     email: false,
     address: false,
@@ -46,29 +58,31 @@ export const metadata = {
   },
   icons: {
     icon: '/menu.svg',
-    apple: '/menu.svg', 
+    apple: '/menu.svg',
   },
   openGraph: {
-    title: 'Almers Food — Frozen Food Banyuwangi | Praktis & Premium',
-    description: 'Jual frozen food rumahan di Banyuwangi. Roti maryam, pastel, kroket, samosa. Siap goreng & kirim luar kota. Rasa berkelas harga pas.',
+    title: 'Almers Food Banyuwangi | Toko Frozen Food Terlengkap di Banyuwangi',
+    description:
+      'Toko frozen food di Banyuwangi. Jual Roti Maryam, Pastel, Kroket, Samosa — homemade, higienis, harga terjangkau. Bisa kirim luar kota ke seluruh Indonesia.',
     url: 'https://almersfood.vercel.app',
-    siteName: 'Almers Food',
+    siteName: 'Almers Food Banyuwangi',
     locale: 'id_ID',
     type: 'website',
     images: [
       {
-        url: '/foto/Background Slider 1.png',
+        url: '/foto/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Almers Food - Frozen Food Banyuwangi',
+        alt: 'Almers Food Banyuwangi - Toko Frozen Food Terlengkap di Banyuwangi',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Almers Food — Frozen Food Banyuwangi',
-    description: 'Frozen food premium asli Banyuwangi. Roti Maryam, Pastel, Kroket. Siap kirim!',
-    images: ['/foto/Background Slider 1.png'],
+    title: 'Almers Food Banyuwangi | Toko Frozen Food Terlengkap',
+    description:
+      'Toko frozen food di Banyuwangi. Roti Maryam, Pastel, Kroket, Samosa. Homemade, halal, harga terjangkau. Kirim ke seluruh Indonesia!',
+    images: ['/foto/og-image.png'],
   },
   robots: {
     index: true,
@@ -81,16 +95,14 @@ export const metadata = {
       'max-snippet': -1,
     },
   },
-  // Geo-tags for Local SEO (Banyuwangi coordinates)
+  // Geo-tags for Local SEO (Banyuwangi, Jawa Timur)
   other: {
-    'geo.region': 'ID-JI', // East Java
-    'geo.placename': 'Banyuwangi',
-    'geo.position': '-8.2192;114.3691', // Approx lat/long for Banyuwangi
+    'geo.region': 'ID-JI',
+    'geo.placename': 'Banyuwangi, Jawa Timur',
+    'geo.position': '-8.2192;114.3691',
     'ICBM': '-8.2192, 114.3691',
   },
 };
-
-import JsonLd from '@/components/JsonLd';
 
 export default function RootLayout({ children }) {
   return (

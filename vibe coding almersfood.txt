@@ -1,0 +1,177 @@
+Buat website modern, clean, dan user friendly untuk frozen food dengan brand “Almers Food”. Website harus terasa premium tapi tetap hangat dan rumahan. Gunakan Next.js App Router (folder app) dengan React .jsx (bukan .tsx). Styling wajib memakai Styled Components (bukan Tailwind). Gunakan Swiper untuk hero slider, Framer Motion untuk animasi halus, Sonner untuk notifikasi, Lucide React untuk icon utama, React Icons untuk icon tambahan (misal sosial media, rating, kategori, tombol UI), Zustand untuk state cart/order, dan React Loading Skeleton untuk loading state. Tema warna wajib mengikuti referensi logo dengan nuansa elegan, lembut, dan premium untuk brand makanan. Gunakan gradient halus dan jangan terlalu ngejreng.
+
+PALETTE (WAJIB)
+Primary (utama, tombol utama, header): Deep Maroon #6E494D
+Secondary (card, section highlight): Dusty Mauve #987682
+Supporting (badge, hover, soft button): Soft Rose #BA9C98
+Background (utama): Warm Cream #F6F1F0
+Text utama: Near-black warm #1F1B1C
+Border / Divider: Light Rose Gray #E7DADA
+
+FONT DAN STYLE
+Wajib konsisten font di seluruh halaman. Gunakan Google Font yang elegan dan readable (contoh Poppins untuk body + Playfair Display untuk judul, atau Inter + DM Serif Display). Heading terasa “frozenfood premium”, body tetap modern. Rounded besar (radius 18–24px), shadow lembut, spacing lega, tombol jelas. Semua section rapi dan tidak penuh.
+
+STRUKTUR HALAMAN
+Buat layout dengan Navbar sticky, footer lengkap, dan responsive untuk mobile.
+1.	Beranda (/)
+Hero section dengan slider Swiper:
+Slide 1: “Frozen Food Praktis, Rasa Tetap Berkelas”
+Slide 2: “Siap Masak, Siap Nikmat”
+Slide 3: “Bisa Kirim Luar Kota, Aman dan Rapi”
+CTA utama: tombol “Order via WhatsApp” (nomor: 087806554701)
+CTA kedua: tombol “Lihat Katalog” menuju /katalog
+Tambahkan highlight fitur dengan icon lucide:
+Fresh & Higienis
+Siap Masak
+Bisa Antar Luar Kota
+Rasa Konsisten
+Section Produk Unggulan (cards) - ukuran card menyesuaikan foto yang ada
+Tampilkan 6 produk:
+-Roti Maryam Ori
+-Roti Maryam Coklat
+-Pastel
+-Kroket
+-Samosa Sayur
+-Samosa Daging
+Setiap card ada foto dari folder public/foto
+Tampilkan harga produk wajib dari data products.js (field price) lalu format Rupiah
+Ada tombol “Pesan” yang membuka modal mini untuk isi form (nama, alamat, produk, varian, jumlah, catatan)
+Saat submit, direct ke WhatsApp dengan format pesan otomatis + hitung total dari price x qty
+Section “Kenapa Almers Food?”
+Tulis copywriting memikat:
+“Almers Food dibuat untuk kamu yang mau makan enak tanpa ribet. Tinggal goreng atau panggang, aromanya langsung bikin lapar. Cocok buat anak kos, ibu rumah tangga, sampai bekal kerja.”
+Section Testimoni Singkat
+Carousel testimoni kecil (Swiper atau simple)
+Rating bintang 5
+Narasi terasa real dan meyakinkan
+2.	Tentang Kami (/tentang)
+Isi narasi hangat:
+“Almers Food adalah frozen food rumahan dengan rasa yang serius. Kita jaga kualitas dari adonan, isian, sampai pengemasan. Semua dibuat dengan standar bersih, dan rasa yang konsisten.”
+Tambahkan section:
+Visi
+Komitmen kualitas
+Proses packaging untuk luar kota
+Tambahkan Beberapa Card+ikon Untuk Menjelaskan Almers Food lebih lanjut
+3.	Review (/review)
+Buat halaman review yang terasa “jualan tapi tidak maksa”
+Gunakan card review dengan foto avatar sederhana, nama, rating bintang, dan cerita yang bikin calon pembeli yakin
+Minimal 6 review:
+“Aku kira frozen food biasa, ternyata rotinya lembut banget. Pas digoreng, aromanya wangi. Anak-anak langsung minta lagi.”
+“Samosanya padat, isiannya kerasa, dan nggak berminyak. Ini yang bikin nagih.”
+“Packaging luar kota aman. Sampai rumah masih rapi, tinggal masuk freezer.”
+“Pastelnya renyah, isian gurih, nggak pelit.”
+“Kroketnya lembut, creamy, dan nggak bikin eneg.”
+“Roti Maryam coklatnya manisnya pas, cocok buat cemilan sore.”
+Tambahkan CTA bawah:
+“Tertarik? Sekali coba, biasanya repeat order.”
+4.	Katalog (/katalog) HALAMAN TERPISAH
+Halaman katalog wajib punya:
+Search input
+Filter kategori (Roti, Gorengan, Snack)
+Grid produk dengan foto dari public/foto
+Tiap produk ada:
+Nama
+Varian (kalau ada)
+Harga wajib dari data products.js (field price) lalu format Rupiah
+Tombol “Tambah Pesanan”
+Gunakan Zustand untuk menyimpan state pesanan (cart sederhana)
+
+LOGIC CART WAJIB (PENJUMLAHAN OTOMATIS)
+Saat user klik “Tambah Pesanan”:
+•	Jika produk belum ada di cart: tambahkan sebagai item baru dengan qty = 1
+•	Jika produk sudah ada di cart: qty bertambah (qty + 1)
+Cart wajib menyimpan: productId, name, price, selectedVariant (jika ada), qty
+User bisa:
+•	Menambah qty dengan tombol plus
+•	Mengurangi qty dengan tombol minus (jika qty jadi 0, hapus item)
+•	Hapus item langsung
+•	Clear cart
+
+RINGKASAN PESANAN (KANAN DESKTOP / BAWAH MOBILE)
+Wajib menampilkan:
+•	List item (nama + varian) + qty
+•	Harga satuan (price)
+•	Subtotal per item = price x qty
+•	Total keseluruhan = jumlah semua subtotal item (jika beli lebih dari 1 produk, total harus otomatis ditambah)
+•	Tombol “Checkout via WhatsApp”
+
+CHECKOUT VIA WHATSAPP
+Checkout via WhatsApp wajib memakai form:
+Nama
+Alamat lengkap
+Catatan tambahan (opsional)
+Pilihan: Ambil di tempat / Delivery / Kirim luar kota
+Saat submit:
+•	Hitung ulang total dari cart
+•	Redirect ke WhatsApp dengan template pesan rapi, wajib ada:
+List item + qty
+Harga satuan
+Subtotal per item
+Total keseluruhan
+Metode pengiriman
+Nama + alamat
+DAFTAR PRODUK KATALOG (WAJIB SESUAI DATA products.js)
+Roti Maryam Ori (15000) isi 5
+Roti Maryam Coklat (20000) isi 5
+Pastel (25000) isi 10
+Kroket (35000) isi 10
+Lumpur Kenari (40000) isi 10
+Samosa Sayur (20000) isi 10
+Samosa Daging (25000) isi 10
+Brota (25000) isi 10
+5.	Kontak (section di Home + Footer)
+Alamat:
+Jl. Belitung No.65, Lateng, Kec. Banyuwangi, Kabupaten Banyuwangi, Jawa Timur 68413
+Google Maps link:
+https://maps.app.goo.gl/qJ3i3efoP2pencuV7
+CTA WhatsApp:
+087806554701
+Tambahkan tombol “Buka Google Maps” dan “Chat WhatsApp”.
+
+ANIMASI (WAJIB HALUS)
+Gunakan Framer Motion untuk:
+Fade in + slide up tiap section saat scroll
+Hover effect pada card produk
+Button micro interaction
+Navbar transisi halus saat scroll
+
+NOTIFIKASI (Sonner)
+Saat add produk: “Ditambahkan ke pesanan”
+Saat checkout: “Mengarahkan ke WhatsApp…”
+LOADING (React Loading Skeleton)
+Untuk grid katalog saat loading
+Untuk review cards
+
+KONSISTENSI UI
+Semua tombol punya style sama
+Semua card punya radius dan shadow konsisten
+Semua heading punya style konsisten
+Gunakan spacing yang enak dilihat
+Pastikan mobile friendly
+
+FOOTER
+Brand “Almers Food”
+Tagline singkat
+Menu cepat: Beranda, Tentang, Review, Katalog
+Kontak + alamat
+Tombol WhatsApp
+
+CATATAN TEKNIS
+Semua foto produk diambil dari public/foto (gunakan nama file dinamis, atau placeholder jika belum lengkap)
+Gunakan Next.js App Router
+Struktur folder rapi: components, lib, store, data
+Buat data produk dalam file products.js
+Buat helper untuk format Rupiah + generate WhatsApp message
+Harga wajib ambil dari price di products.js, jangan hardcode di komponen
+Call To Action utama di seluruh website: “WhatsApp 087806554701”
+
+TAMBAHAN WAJIB
+1.	Bisa toggle tema Gelap/Terang (default terang) dan usahakan jgn ada font/huruf yg tidak tampak tanpa terkecuali
+2.	Tambahkan button panah ke atas saat scroll kebawah, klik untuk auto scroll ke atas
+3.	Responsive untuk web dan mobile modern
+4.	Untuk warna background jgn warna putih polos. aku mau warna yg lainnya dengan gradasi tetapi tetap cocok dengan tema
+5.	tambahkan animasi yg userfriendly untuk keseluruhan dan juga Hover di navbar(desktop+mobile)
+6.	Gunakan Source Code yg baik dan benar dan tidak bikin lag saat di deploy
+7.	Pastikan Keseluruhan Font/Teks Tampak tanpa terkecuali
+Target vibe: hangat, elegan, modern, bikin lapar, dan bikin orang langsung pengen order.
+

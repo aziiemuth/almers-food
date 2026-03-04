@@ -1,28 +1,30 @@
+const BASE_URL = 'https://almersfood.vercel.app';
+
 export default function sitemap() {
   return [
     {
-      url: 'https://almersfood.vercel.app',
+      url: BASE_URL,
       lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 1,
+      changeFrequency: 'weekly',
+      priority: 1.0,
     },
     {
-      url: 'https://almersfood.vercel.app/tentang',
+      url: `${BASE_URL}/katalog`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/review`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.8,
+      priority: 0.7,
     },
     {
-      url: 'https://almersfood.vercel.app/katalog',
+      url: `${BASE_URL}/tentang`,
       lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
+      changeFrequency: 'monthly',
+      priority: 0.7,
     },
-    {
-      url: 'https://almersfood.vercel.app/review',
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-  ]
+  ];
 }

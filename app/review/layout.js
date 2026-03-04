@@ -1,13 +1,30 @@
 export const metadata = {
-  title: 'Review Pelanggan Frozen Food — Testimoni Almers Food Banyuwangi',
-  description: 'Apa kata pelanggan tentang Almers Food? Baca ulasan jujur tentang kelezatan Roti Maryam, Pastel, dan Kroket kami. Terbukti enak dan nagih.',
+  title: 'Review Pelanggan | Testimoni Frozen Food Almers Food Banyuwangi',
+  description:
+    'Baca ulasan jujur pelanggan Almers Food Banyuwangi. Testimoni tentang kelezatan Roti Maryam, Pastel, Kroket, dan Samosa kami. Terbukti enak, higienis, dan pengiriman aman ke seluruh Indonesia.',
+  keywords: [
+    'review almers food',
+    'testimoni almers food banyuwangi',
+    'review frozen food banyuwangi',
+    'ulasan frozen food banyuwangi',
+    'almers food banyuwangi terpercaya',
+  ],
   alternates: {
-    canonical: '/review',
+    canonical: 'https://almersfood.vercel.app/review',
   },
   openGraph: {
     title: 'Testimoni Pelanggan Almers Food Banyuwangi',
-    description: 'Ratusan pelanggan puas dengan rasa dan kualitas frozen food kami. Simak cerita mereka di sini.',
+    description:
+      'Ratusan pelanggan puas dengan rasa dan kualitas frozen food Almers Food Banyuwangi. Baca cerita mereka di sini.',
     url: 'https://almersfood.vercel.app/review',
+    images: [
+      {
+        url: '/foto/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Review Pelanggan Almers Food Banyuwangi',
+      },
+    ],
   },
 };
 
