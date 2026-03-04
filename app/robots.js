@@ -26,7 +26,7 @@ export default function robots() {
         disallow: ['/api/', '/_next/', '/private/'],
       },
     ],
-    sitemap: 'https://almersfood.vercel.app/sitemap.xml',
-    host: 'https://almersfood.vercel.app',
+    sitemap: 'https://almersfood.web.id/sitemap.xml',
+    host: 'https://almersfood.web.id',
   };
 }

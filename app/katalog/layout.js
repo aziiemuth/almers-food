@@ -13,13 +13,13 @@ export const metadata = {
     'frozen food murah banyuwangi',
   ],
   alternates: {
-    canonical: 'https://almersfood.vercel.app/katalog',
+    canonical: 'https://almersfood.web.id/katalog',
   },
   openGraph: {
     title: 'Katalog Frozen Food Banyuwangi | Harga Terbaik Almers Food',
     description:
       'Cek daftar harga dan menu frozen food Almers Food Banyuwangi. Roti Maryam, Pastel, Kroket, Samosa — homemade, higienis, halal.',
-    url: 'https://almersfood.vercel.app/katalog',
+    url: 'https://almersfood.web.id/katalog',
     images: [
       {
         url: '/foto/og-image.png',

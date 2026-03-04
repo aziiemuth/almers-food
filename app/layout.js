@@ -19,8 +19,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata = {
-  // metadataBase wajib agar OG/Twitter image URL menjadi absolut
-  metadataBase: new URL('https://almersfood.vercel.app'),
+  metadataBase: new URL('https://almersfood.web.id'),
   title: {
     default: 'Almers Food Banyuwangi | Toko Frozen Food Terlengkap di Banyuwangi',
     template: '%s | Almers Food Banyuwangi',
@@ -49,7 +48,7 @@ export const metadata = {
   creator: 'Almers Food',
   publisher: 'Almers Food',
   alternates: {
-    canonical: 'https://almersfood.vercel.app',
+    canonical: 'https://almersfood.web.id',
   },
   formatDetection: {
     email: false,
@@ -64,7 +63,7 @@ export const metadata = {
     title: 'Almers Food Banyuwangi | Toko Frozen Food Terlengkap di Banyuwangi',
     description:
       'Toko frozen food di Banyuwangi. Jual Roti Maryam, Pastel, Kroket, Samosa — homemade, higienis, harga terjangkau. Bisa kirim luar kota ke seluruh Indonesia.',
-    url: 'https://almersfood.vercel.app',
+    url: 'https://almersfood.web.id',
     siteName: 'Almers Food Banyuwangi',
     locale: 'id_ID',
     type: 'website',
@@ -95,7 +94,6 @@ export const metadata = {
       'max-snippet': -1,
     },
   },
-  // Geo-tags for Local SEO (Banyuwangi, Jawa Timur)
   other: {
     'geo.region': 'ID-JI',
     'geo.placename': 'Banyuwangi, Jawa Timur',

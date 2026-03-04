@@ -10,13 +10,13 @@ export const metadata = {
     'almers food banyuwangi terpercaya',
   ],
   alternates: {
-    canonical: 'https://almersfood.vercel.app/review',
+    canonical: 'https://almersfood.web.id/review',
   },
   openGraph: {
     title: 'Testimoni Pelanggan Almers Food Banyuwangi',
     description:
       'Ratusan pelanggan puas dengan rasa dan kualitas frozen food Almers Food Banyuwangi. Baca cerita mereka di sini.',
-    url: 'https://almersfood.vercel.app/review',
+    url: 'https://almersfood.web.id/review',
     images: [
       {
         url: '/foto/og-image.png',

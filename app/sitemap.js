@@ -1,4 +1,4 @@
-const BASE_URL = 'https://almersfood.vercel.app';
+const BASE_URL = 'https://almersfood.web.id';
 
 export default function sitemap() {
   return [

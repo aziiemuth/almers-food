@@ -4,20 +4,20 @@ export default function JsonLd() {
     '@graph': [
       {
         '@type': ['LocalBusiness', 'FoodStore'],
-        '@id': 'https://almersfood.vercel.app/#business',
+        '@id': 'https://almersfood.web.id/#business',
         name: 'Almers Food Banyuwangi',
         alternateName: 'Almers Food',
         description:
           'Almers Food adalah toko frozen food di Banyuwangi yang menyediakan berbagai produk makanan beku berkualitas dengan harga terjangkau. Kami menjual Roti Maryam, Pastel, Kroket, Samosa, dan aneka snack beku homemade yang higienis dan halal.',
-        url: 'https://almersfood.vercel.app',
+        url: 'https://almersfood.web.id',
         telephone: '+6287806554701',
         image: [
-          'https://almersfood.vercel.app/foto/og-image.png',
-          'https://almersfood.vercel.app/foto/Background%20Slider%201.png',
+          'https://almersfood.web.id/foto/og-image.png',
+          'https://almersfood.web.id/foto/Background%20Slider%201.png',
         ],
         logo: {
           '@type': 'ImageObject',
-          url: 'https://almersfood.vercel.app/menu.svg',
+          url: 'https://almersfood.web.id/menu.svg',
           width: 512,
           height: 512,
         },
@@ -34,7 +34,7 @@ export default function JsonLd() {
           latitude: -8.2192,
           longitude: 114.3691,
         },
-        hasMap: 'https://maps.google.com/?q=Almers+Food+Banyuwangi',
+        hasMap: 'https://maps.app.goo.gl/Xu2qW1YonqnERZnVA',
         areaServed: [
           {
             '@type': 'City',
@@ -74,7 +74,8 @@ export default function JsonLd() {
         },
         sameAs: [
           'https://www.instagram.com/almersfood',
-          'https://almersfood.vercel.app',
+          'https://almersfood.web.id',
+          'https://maps.app.goo.gl/Xu2qW1YonqnERZnVA',
         ],
         contactPoint: {
           '@type': 'ContactPoint',
@@ -89,51 +90,51 @@ export default function JsonLd() {
       },
       {
         '@type': 'WebSite',
-        '@id': 'https://almersfood.vercel.app/#website',
-        url: 'https://almersfood.vercel.app',
+        '@id': 'https://almersfood.web.id/#website',
+        url: 'https://almersfood.web.id',
         name: 'Almers Food Banyuwangi',
         description:
           'Website resmi Almers Food — toko frozen food di Banyuwangi yang menyediakan produk makanan beku berkualitas dengan harga terjangkau.',
         publisher: {
-          '@id': 'https://almersfood.vercel.app/#business',
+          '@id': 'https://almersfood.web.id/#business',
         },
         inLanguage: 'id-ID',
         potentialAction: {
           '@type': 'SearchAction',
           target: {
             '@type': 'EntryPoint',
-            urlTemplate: 'https://almersfood.vercel.app/katalog?q={search_term_string}',
+            urlTemplate: 'https://almersfood.web.id/katalog?q={search_term_string}',
           },
           'query-input': 'required name=search_term_string',
         },
       },
       {
         '@type': 'BreadcrumbList',
-        '@id': 'https://almersfood.vercel.app/#breadcrumb',
+        '@id': 'https://almersfood.web.id/#breadcrumb',
         itemListElement: [
           {
             '@type': 'ListItem',
             position: 1,
             name: 'Beranda',
-            item: 'https://almersfood.vercel.app',
+            item: 'https://almersfood.web.id',
           },
           {
             '@type': 'ListItem',
             position: 2,
             name: 'Katalog Frozen Food',
-            item: 'https://almersfood.vercel.app/katalog',
+            item: 'https://almersfood.web.id/katalog',
           },
           {
             '@type': 'ListItem',
             position: 3,
             name: 'Review Pelanggan',
-            item: 'https://almersfood.vercel.app/review',
+            item: 'https://almersfood.web.id/review',
           },
           {
             '@type': 'ListItem',
             position: 4,
             name: 'Tentang Kami',
-            item: 'https://almersfood.vercel.app/tentang',
+            item: 'https://almersfood.web.id/tentang',
           },
         ],
       },

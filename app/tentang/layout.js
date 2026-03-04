@@ -11,13 +11,13 @@ export const metadata = {
     'frozen food homemade banyuwangi',
   ],
   alternates: {
-    canonical: 'https://almersfood.vercel.app/tentang',
+    canonical: 'https://almersfood.web.id/tentang',
   },
   openGraph: {
     title: 'Tentang Almers Food — Frozen Food Rumahan Terbaik di Banyuwangi',
     description:
       'Profil Almers Food: produsen frozen food homemade di Banyuwangi. Kami mengutamakan kualitas, kebersihan, dan rasa yang konsisten.',
-    url: 'https://almersfood.vercel.app/tentang',
+    url: 'https://almersfood.web.id/tentang',
     images: [
       {
         url: '/foto/og-image.png',
