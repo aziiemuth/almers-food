@@ -602,7 +602,7 @@ const KatalogButton = styled(motion(Link))`
 const stats = [
   { number: '100+', label: 'Pelanggan Puas' },
   { number: '8', label: 'Varian Produk' },
-  { number: '★ 5.0', label: 'Rating Pelanggan' },
+  { number: '★ 4.9', label: 'Rating Pelanggan' },
   { number: '10+', label: 'Tahun Berdiri' },
 ];
 
