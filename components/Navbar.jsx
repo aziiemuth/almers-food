@@ -14,7 +14,8 @@ const Nav = styled(motion.nav)`
   left: 0;
   right: 0;
   z-index: 1000;
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   background: ${({ theme, $scrolled }) =>
     $scrolled ? theme.colors.navBgSolid : theme.colors.navBg};
   border-bottom: 1px solid ${({ theme, $scrolled }) =>
@@ -33,15 +34,20 @@ const NavContainer = styled.div`
   justify-content: space-between;
   height: ${({ $scrolled }) => ($scrolled ? '64px' : '76px')};
   transition: height 0.35s ease;
+
+  @media (max-width: 768px) {
+    padding: 0 16px;
+    height: 64px;
+  }
 `;
 
 const Brand = styled(Link)`
   font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
+  font-size: 1.45rem;
   font-weight: 700;
   color: ${({ theme }) => theme.colors.primary};
   text-decoration: none;
-  letter-spacing: -0.5px;
+  letter-spacing: 0;
   transition: color 0.3s ease;
 
   span {
@@ -67,7 +73,7 @@ const NavLink = styled(Link)`
   font-weight: 500;
   color: ${({ theme, $active }) => ($active ? theme.colors.primary : theme.colors.text)};
   text-decoration: none;
-  border-radius: 12px;
+  border-radius: 8px;
   transition: all 0.3s ease;
 
   &::after {
@@ -100,9 +106,9 @@ const NavActions = styled.div`
 `;
 
 const ThemeToggle = styled(motion.button)`
-  width: 40px;
-  height: 40px;
-  border-radius: 12px;
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
   border: 1px solid ${({ theme }) => theme.colors.border};
   background: ${({ theme }) => theme.colors.surface};
   color: ${({ theme }) => theme.colors.text};
@@ -120,9 +126,9 @@ const ThemeToggle = styled(motion.button)`
 `;
 
 const MenuButton = styled(motion.button)`
-  width: 40px;
-  height: 40px;
-  border-radius: 12px;
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
   border: 1px solid ${({ theme }) => theme.colors.border};
   background: ${({ theme }) => theme.colors.surface};
   color: ${({ theme }) => theme.colors.text};
@@ -159,10 +165,10 @@ const MobileDrawer = styled.div`
   top: 0;
   right: 0;
   bottom: 0;
-  width: 280px;
+  width: min(320px, 86vw);
   background: ${({ theme }) => theme.colors.surface};
   z-index: 999;
-  padding: 24px;
+  padding: 22px;
   display: flex;
   flex-direction: column;
   box-shadow: -4px 0 30px ${({ theme }) => theme.colors.shadowMd};
@@ -191,7 +197,7 @@ const MobileDrawerBrand = styled.span`
 const CloseButton = styled(motion.button)`
   width: 36px;
   height: 36px;
-  border-radius: 10px;
+  border-radius: 8px;
   border: 1px solid ${({ theme }) => theme.colors.border};
   background: transparent;
   color: ${({ theme }) => theme.colors.text};
@@ -215,7 +221,7 @@ const MobileNavLink = styled(Link)`
   font-weight: 500;
   color: ${({ theme, $active }) => ($active ? theme.colors.primary : theme.colors.text)};
   text-decoration: none;
-  border-radius: 12px;
+  border-radius: 8px;
   background: ${({ theme, $active }) => ($active ? theme.colors.badgeBg : 'transparent')};
   transition: all 0.3s ease;
   margin-bottom: 4px;

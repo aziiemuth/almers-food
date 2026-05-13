@@ -10,12 +10,14 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-poppins), "Poppins", sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
+  background: #fff8f2;
 }
 
 a {
@@ -29,7 +31,29 @@ img {
 }
 
 button {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-poppins), "Poppins", sans-serif;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(243, 179, 61, 0.55);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: rgba(243, 179, 61, 0.35);
+  color: #211817;
 }
 
 ::-webkit-scrollbar {
@@ -41,10 +65,10 @@ button {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ba9c98;
+  background: #d7a69a;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #987682;
+  background: #8f2432;
 }

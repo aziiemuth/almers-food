@@ -29,16 +29,6 @@ const HeroBanner = styled.section`
   justify-content: center;
   overflow: hidden;
 
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(ellipse at 30% 60%, rgba(255,179,0,0.12) 0%, transparent 55%),
-      radial-gradient(ellipse at 70% 20%, rgba(255,80,0,0.08) 0%, transparent 50%);
-    pointer-events: none;
-  }
-
   @media (max-width: 768px) {
     padding: 80px 16px 60px;
     min-height: 360px;
@@ -63,7 +53,7 @@ const HeroBadge = styled(motion.span)`
   font-weight: 700;
   font-family: 'Poppins', sans-serif;
   padding: 6px 16px;
-  border-radius: 50px;
+  border-radius: 8px;
   margin-bottom: 20px;
   letter-spacing: 0.5px;
 `;
@@ -130,7 +120,7 @@ const RatingSummarySection = styled.section`
 const RatingSummaryCard = styled(motion.div)`
   background: ${({ theme }) => theme.colors.cardBg};
   border: 1px solid ${({ theme }) => theme.colors.border};
-  border-radius: 28px;
+  border-radius: 8px;
   padding: 36px 40px;
   box-shadow: 0 20px 60px ${({ theme }) => theme.colors.shadowMd};
   display: grid;
@@ -288,7 +278,7 @@ const FilterLabel = styled.span`
 
 const FilterChip = styled(motion.button)`
   padding: 8px 20px;
-  border-radius: 50px;
+  border-radius: 8px;
   font-size: 0.82rem;
   font-weight: 600;
   font-family: 'Poppins', sans-serif;
@@ -300,7 +290,7 @@ const FilterChip = styled(motion.button)`
 
   &:hover {
     border-color: ${({ theme }) => theme.colors.primary};
-    color: ${({ theme }) => theme.colors.primary};
+    color: ${({ $active, theme }) => $active ? theme.colors.textOnPrimary : theme.colors.primary};
   }
 `;
 
@@ -341,7 +331,7 @@ const avatarColors = [
 const ReviewCard = styled(motion.div)`
   background: ${({ theme }) => theme.colors.cardBg};
   border: 1px solid ${({ theme }) => theme.colors.border};
-  border-radius: 24px;
+  border-radius: 8px;
   padding: 28px;
   transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
   display: flex;
@@ -382,7 +372,7 @@ const ReviewHeader = styled.div`
 const Avatar = styled.div`
   width: 50px;
   height: 50px;
-  border-radius: 16px;
+  border-radius: 8px;
   background: ${({ $color }) => $color};
   color: #fff;
   display: flex;
@@ -425,7 +415,7 @@ const ProductTag = styled.span`
   font-weight: 600;
   font-family: 'Poppins', sans-serif;
   padding: 3px 10px;
-  border-radius: 50px;
+  border-radius: 8px;
   background: ${({ theme }) => theme.colors.badgeBg};
   color: ${({ theme }) => theme.colors.primary};
   margin-left: auto;
@@ -477,7 +467,7 @@ const HelpfulBtn = styled.button`
 const SkeletonCard = styled.div`
   background: ${({ theme }) => theme.colors.cardBg};
   border: 1px solid ${({ theme }) => theme.colors.border};
-  border-radius: 24px;
+  border-radius: 8px;
   padding: 28px;
 `;
 
@@ -492,7 +482,7 @@ const CTACard = styled(motion.div)`
   margin: 0 auto;
   background: ${({ theme }) => theme.colors.cardBg};
   border: 1px solid ${({ theme }) => theme.colors.border};
-  border-radius: 32px;
+  border-radius: 8px;
   padding: 56px 40px;
   position: relative;
   overflow: hidden;
@@ -546,7 +536,7 @@ const CTAButton = styled(motion.a)`
   color: #FFFFFF;
   font-size: 1rem;
   font-weight: 600;
-  border-radius: 18px;
+  border-radius: 10px;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
   transition: all 0.3s ease;

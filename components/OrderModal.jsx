@@ -20,21 +20,29 @@ const Overlay = styled(motion.div)`
   align-items: center;
   justify-content: center;
   padding: 24px;
+
+  @media (max-width: 480px) {
+    align-items: flex-end;
+    padding: 0;
+  }
 `;
 
 const Modal = styled(motion.div)`
   background: ${({ theme }) => theme.colors.surface};
-  border-radius: 24px;
+  border-radius: 8px;
   width: 100%;
   max-width: 480px;
   max-height: 90vh;
   overflow-y: auto;
   padding: 32px;
   position: relative;
+  border: 1px solid ${({ theme }) => theme.colors.border};
+  box-shadow: 0 24px 80px ${({ theme }) => theme.colors.shadowMd};
 
   @media (max-width: 480px) {
     padding: 24px;
-    border-radius: 20px;
+    border-radius: 16px 16px 0 0;
+    max-height: 88vh;
   }
 `;
 
@@ -44,7 +52,7 @@ const CloseBtn = styled(motion.button)`
   right: 16px;
   width: 36px;
   height: 36px;
-  border-radius: 10px;
+  border-radius: 8px;
   border: 1px solid ${({ theme }) => theme.colors.border};
   background: transparent;
   color: ${({ theme }) => theme.colors.text};
@@ -88,7 +96,7 @@ const Label = styled.label`
 const Input = styled.input`
   width: 100%;
   padding: 12px 16px;
-  border-radius: 14px;
+  border-radius: 8px;
   border: 1px solid ${({ theme }) => theme.colors.inputBorder};
   background: ${({ theme }) => theme.colors.inputBg};
   color: ${({ theme }) => theme.colors.text};
@@ -110,7 +118,7 @@ const Input = styled.input`
 const TextArea = styled.textarea`
   width: 100%;
   padding: 12px 16px;
-  border-radius: 14px;
+  border-radius: 8px;
   border: 1px solid ${({ theme }) => theme.colors.inputBorder};
   background: ${({ theme }) => theme.colors.inputBg};
   color: ${({ theme }) => theme.colors.text};
@@ -140,7 +148,7 @@ const QtyRow = styled.div`
 const QtyButton = styled(motion.button)`
   width: 36px;
   height: 36px;
-  border-radius: 10px;
+  border-radius: 8px;
   border: 1px solid ${({ theme }) => theme.colors.border};
   background: ${({ theme }) => theme.colors.surface};
   color: ${({ theme }) => theme.colors.text};
@@ -170,7 +178,7 @@ const TotalRow = styled.div`
   margin: 20px 0;
   padding: 16px;
   background: ${({ theme }) => theme.colors.badgeBg};
-  border-radius: 14px;
+  border-radius: 8px;
 `;
 
 const TotalLabel = styled.span`
@@ -189,7 +197,7 @@ const SubmitButton = styled(motion.button)`
   width: 100%;
   padding: 14px;
   border: none;
-  border-radius: 16px;
+  border-radius: 10px;
   background: ${({ theme }) => theme.colors.primary};
   color: ${({ theme }) => theme.colors.textOnPrimary};
   font-size: 0.95rem;

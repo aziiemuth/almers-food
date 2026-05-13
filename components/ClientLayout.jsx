@@ -16,8 +16,8 @@ const PageWrapper = styled.div`
 `;
 
 const Main = styled.main`
-  padding-top: 76px;
-  min-height: calc(100vh - 76px);
+  padding-top: 64px;
+  min-height: calc(100vh - 64px);
 `;
 
 export default function ClientLayout({ children }) {

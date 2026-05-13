@@ -20,14 +20,14 @@ import 'swiper/css/effect-fade';
 /* ===== HERO ===== */
 const HeroSection = styled.section`
   position: relative;
-  min-height: 85vh;
+  min-height: 78vh;
   display: flex;
   align-items: center;
   overflow: hidden;
 
   .swiper {
     width: 100%;
-    height: 85vh;
+    height: 78vh;
   }
 
   .swiper-pagination-bullet {
@@ -48,10 +48,10 @@ const HeroSection = styled.section`
 const HeroSlide = styled.div`
   position: relative;
   width: 100%;
-  height: 85vh;
+  height: 78vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 `;
 
 const HeroOverlay = styled.div`
@@ -65,42 +65,55 @@ const HeroOverlay = styled.div`
 `;
 
 const HeroContent = styled(motion.div)`
-  text-align: center;
+  text-align: left;
   z-index: 2;
   padding: 0 24px;
-  max-width: 700px;
+  max-width: 760px;
+  width: min(1200px, 100%);
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `;
 
 const HeroTitle = styled.h1`
   font-family: 'Playfair Display', serif;
-  font-size: 3rem;
+  font-size: clamp(2.2rem, 5vw, 4.6rem);
   font-weight: 700;
   color: #FFFFFF;
-  margin-bottom: 16px;
-  line-height: 1.2;
+  margin-bottom: 18px;
+  line-height: 1.05;
   text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
 
   @media (max-width: 768px) {
-    font-size: 2rem;
+    line-height: 1.12;
   }
 `;
 
 const HeroSubtitle = styled.p`
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 32px;
   font-family: 'Poppins', sans-serif;
+  max-width: 560px;
 
   @media (max-width: 768px) {
     font-size: 0.95rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 `;
 
 const HeroCTAs = styled.div`
   display: flex;
   gap: 14px;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
 const PrimaryButton = styled(motion.a)`
@@ -112,7 +125,7 @@ const PrimaryButton = styled(motion.a)`
   color: #FFFFFF;
   font-size: 0.95rem;
   font-weight: 600;
-  border-radius: 18px;
+  border-radius: 10px;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
   transition: all 0.3s ease;
@@ -135,7 +148,7 @@ const SecondaryButton = styled(motion(Link))`
   color: #FFFFFF;
   font-size: 0.95rem;
   font-weight: 600;
-  border-radius: 18px;
+  border-radius: 10px;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -149,7 +162,7 @@ const SecondaryButton = styled(motion(Link))`
 
 /* ===== FEATURES ===== */
 const Section = styled.section`
-  padding: 80px 24px;
+  padding: 72px 24px;
   max-width: 1200px;
   margin: 0 auto;
 
@@ -193,9 +206,9 @@ const FeaturesGrid = styled.div`
 
 const FeatureCard = styled(motion.div)`
   text-align: center;
-  padding: 32px 20px;
+  padding: 28px 20px;
   background: ${({ theme }) => theme.colors.cardBg};
-  border-radius: 20px;
+  border-radius: 8px;
   border: 1px solid ${({ theme }) => theme.colors.border};
   transition: all 0.3s ease;
 
@@ -209,7 +222,7 @@ const FeatureCard = styled(motion.div)`
 const FeatureIcon = styled.div`
   width: 56px;
   height: 56px;
-  border-radius: 16px;
+  border-radius: 8px;
   background: ${({ theme }) => theme.colors.badgeBg};
   color: ${({ theme }) => theme.colors.primary};
   display: flex;
@@ -251,7 +264,7 @@ const ProductsGrid = styled.div`
 
 const ProductCard = styled(motion.div)`
   background: ${({ theme }) => theme.colors.cardBg};
-  border-radius: 22px;
+  border-radius: 8px;
   overflow: hidden;
   border: 1px solid ${({ theme }) => theme.colors.border};
   transition: all 0.3s ease;
@@ -299,7 +312,7 @@ const OrderButton = styled(motion.button)`
   width: 100%;
   padding: 12px;
   border: none;
-  border-radius: 14px;
+  border-radius: 8px;
   background: ${({ theme }) => theme.colors.primary};
   color: ${({ theme }) => theme.colors.textOnPrimary};
   font-size: 0.85rem;
@@ -350,7 +363,7 @@ const WhyText = styled.p`
 const TestimonialCard = styled.div`
   background: ${({ theme }) => theme.colors.cardBg};
   border: 1px solid ${({ theme }) => theme.colors.border};
-  border-radius: 20px;
+  border-radius: 8px;
   padding: 28px;
   height: 100%;
 `;
@@ -496,7 +509,7 @@ const SeoLink = styled.a`
 
 const MapWrapper = styled.div`
   width: 100%;
-  border-radius: 20px;
+  border-radius: 8px;
   overflow: hidden;
   border: 1px solid ${({ theme }) => theme.colors.border};
   box-shadow: 0 8px 30px ${({ theme }) => theme.colors.shadow};
@@ -527,7 +540,7 @@ const ViewAllButton = styled(motion(Link))`
   color: ${({ theme }) => theme.colors.primary};
   font-size: 0.95rem;
   font-weight: 600;
-  border-radius: 18px;
+  border-radius: 10px;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
   transition: all 0.3s ease;
@@ -555,7 +568,7 @@ const CTAButton = styled(motion.a)`
   color: #FFFFFF;
   font-size: 1rem;
   font-weight: 600;
-  border-radius: 18px;
+  border-radius: 10px;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
   margin-top: 16px;

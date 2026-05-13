@@ -32,16 +32,6 @@ const HeroBanner = styled.section`
   justify-content: center;
   overflow: hidden;
 
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(ellipse at 20% 50%, rgba(255,179,0,0.15) 0%, transparent 60%),
-      radial-gradient(ellipse at 80% 20%, rgba(255,100,0,0.1) 0%, transparent 50%);
-    pointer-events: none;
-  }
-
   @media (max-width: 768px) {
     padding: 80px 16px 60px;
     min-height: 360px;
@@ -60,7 +50,7 @@ const HeroBadge = styled(motion.span)`
   font-weight: 600;
   font-family: 'Poppins', sans-serif;
   padding: 6px 16px;
-  border-radius: 50px;
+  border-radius: 8px;
   margin-bottom: 20px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -173,7 +163,7 @@ const SectionTag = styled.span`
   color: ${({ theme }) => theme.colors.primary};
   background: ${({ theme }) => theme.colors.badgeBg};
   padding: 5px 14px;
-  border-radius: 50px;
+  border-radius: 8px;
   margin-bottom: 14px;
 `;
 
@@ -237,7 +227,7 @@ const TimelineItem = styled(motion.div)`
 const TimelineDot = styled.div`
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: 8px;
   background: ${({ theme }) => theme.colors.badgeBg};
   border: 2px solid ${({ theme }) => theme.colors.primary};
   color: ${({ theme }) => theme.colors.primary};
@@ -281,7 +271,7 @@ const VisionCard = styled(motion.div)`
   position: relative;
   padding: 36px 30px;
   background: ${({ theme }) => theme.colors.cardBg};
-  border-radius: 24px;
+  border-radius: 8px;
   border: 1px solid ${({ theme }) => theme.colors.border};
   overflow: hidden;
   transition: all 0.3s ease;
@@ -294,7 +284,7 @@ const VisionCard = styled(motion.div)`
     right: 0;
     height: 4px;
     background: linear-gradient(90deg, ${({ theme }) => theme.colors.primary}, ${({ theme }) => theme.colors.secondary});
-    border-radius: 24px 24px 0 0;
+    border-radius: 8px 8px 0 0;
   }
 
   &:hover {
@@ -307,7 +297,7 @@ const VisionCard = styled(motion.div)`
 const VisionIcon = styled.div`
   width: 52px;
   height: 52px;
-  border-radius: 16px;
+  border-radius: 8px;
   background: ${({ theme }) => theme.colors.badgeBg};
   color: ${({ theme }) => theme.colors.primary};
   display: flex;
@@ -363,7 +353,7 @@ const InfoCard = styled(motion.div)`
   padding: 30px 24px;
   background: ${({ theme }) => theme.colors.cardBg};
   border: 1px solid ${({ theme }) => theme.colors.border};
-  border-radius: 22px;
+  border-radius: 8px;
   text-align: center;
   transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
   position: relative;
@@ -379,7 +369,7 @@ const InfoCard = styled(motion.div)`
     background: linear-gradient(90deg, ${({ theme }) => theme.colors.primary}, ${({ theme }) => theme.colors.secondary});
     transform: scaleX(0);
     transition: transform 0.3s ease;
-    border-radius: 0 0 22px 22px;
+    border-radius: 0 0 8px 8px;
   }
 
   &:hover {
@@ -396,7 +386,7 @@ const InfoCard = styled(motion.div)`
 const CardIcon = styled.div`
   width: 60px;
   height: 60px;
-  border-radius: 18px;
+  border-radius: 8px;
   background: linear-gradient(135deg, ${({ theme }) => theme.colors.badgeBg}, ${({ theme }) => theme.colors.borderLight});
   color: ${({ theme }) => theme.colors.primary};
   display: flex;
@@ -443,7 +433,7 @@ const ShippingGrid = styled.div`
 const ShippingVisual = styled.div`
   background: ${({ theme }) => theme.colors.cardBg};
   border: 1px solid ${({ theme }) => theme.colors.border};
-  border-radius: 24px;
+  border-radius: 8px;
   padding: 32px;
   display: flex;
   flex-direction: column;
@@ -456,7 +446,7 @@ const ShippingStep = styled(motion.div)`
   gap: 14px;
   padding: 16px;
   background: ${({ theme }) => theme.colors.borderLight};
-  border-radius: 14px;
+  border-radius: 8px;
   transition: background 0.2s;
 
   &:hover {
@@ -467,7 +457,7 @@ const ShippingStep = styled(motion.div)`
 const ShippingStepNum = styled.div`
   width: 32px;
   height: 32px;
-  border-radius: 50%;
+  border-radius: 8px;
   background: linear-gradient(135deg, ${({ theme }) => theme.colors.primary}, ${({ theme }) => theme.colors.secondary});
   color: #fff;
   display: flex;
@@ -504,7 +494,7 @@ const CTAInner = styled(motion.div)`
   margin: 0 auto;
   background: ${({ theme }) => theme.colors.cardBg};
   border: 1px solid ${({ theme }) => theme.colors.border};
-  border-radius: 32px;
+  border-radius: 8px;
   padding: 56px 40px;
   position: relative;
   overflow: hidden;
@@ -565,7 +555,7 @@ const CTAButton = styled(motion.a)`
   color: #FFFFFF;
   font-size: 0.95rem;
   font-weight: 600;
-  border-radius: 18px;
+  border-radius: 10px;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
   transition: all 0.3s ease;
@@ -586,7 +576,7 @@ const KatalogButton = styled(motion(Link))`
   color: ${({ theme }) => theme.colors.primary};
   font-size: 0.95rem;
   font-weight: 600;
-  border-radius: 18px;
+  border-radius: 10px;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
   transition: all 0.3s ease;
@@ -697,7 +687,7 @@ export default function TentangPage() {
                   <TimelineDot style={{ animationDelay: `${i * 0.5}s` }}>{t.num}</TimelineDot>
                   <TimelineBody>
                     <TimelineTitle>{t.title}</TimelineTitle>
-                    <TimelineText>{t.desc}</TimelineText>
+                    <TimelineText>{t.text}</TimelineText>
                   </TimelineBody>
                 </TimelineItem>
               ))}

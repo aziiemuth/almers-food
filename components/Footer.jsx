@@ -110,7 +110,7 @@ const WhatsAppButton = styled.a`
   color: #FFFFFF;
   font-size: 0.85rem;
   font-weight: 600;
-  border-radius: 14px;
+  border-radius: 10px;
   text-decoration: none;
   transition: all 0.3s ease;
 
@@ -146,7 +146,7 @@ const SocialLinks = styled.div`
 const SocialIcon = styled.a`
   width: 36px;
   height: 36px;
-  border-radius: 10px;
+  border-radius: 8px;
   border: 1px solid rgba(231, 218, 218, 0.2);
   display: flex;
   align-items: center;

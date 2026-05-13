@@ -17,11 +17,11 @@ import useCartStore from '@/store/cartStore';
 
 /* ===== PAGE LAYOUT ===== */
 const HeroBanner = styled.section`
-  padding: 80px 24px 40px;
+  padding: 96px 24px 56px;
   text-align: center;
   background: ${({ theme }) => theme.colors.heroOverlay};
   color: #FFFFFF;
-  min-height: 260px;
+  min-height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,7 +55,7 @@ const PageSubtitle = styled.p`
 const ContentWrapper = styled.div`
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 24px 80px;
+  padding: 48px 24px 80px;
   display: grid;
   grid-template-columns: 1fr 360px;
   gap: 32px;
@@ -85,7 +85,7 @@ const SearchBox = styled.div`
 const SearchInput = styled.input`
   width: 100%;
   padding: 12px 16px 12px 44px;
-  border-radius: 16px;
+  border-radius: 10px;
   border: 1px solid ${({ theme }) => theme.colors.inputBorder};
   background: ${({ theme }) => theme.colors.inputBg};
   color: ${({ theme }) => theme.colors.text};
@@ -120,7 +120,7 @@ const CategoryTabs = styled.div`
 
 const CategoryTab = styled(motion.button)`
   padding: 8px 18px;
-  border-radius: 14px;
+  border-radius: 10px;
   border: 1px solid ${({ theme, $active }) => ($active ? theme.colors.primary : theme.colors.border)};
   background: ${({ theme, $active }) => ($active ? theme.colors.primary : theme.colors.surface)};
   color: ${({ theme, $active }) => ($active ? theme.colors.textOnPrimary : theme.colors.text)};
@@ -145,13 +145,14 @@ const ProductGrid = styled.div`
   @media (max-width: 600px) {
     grid-template-columns: 1fr;
     max-width: 400px;
+    margin: 0 auto;
   }
 `;
 
 const ProductCard = styled(motion.div)`
   background: ${({ theme }) => theme.colors.cardBg};
   border: 1px solid ${({ theme }) => theme.colors.border};
-  border-radius: 20px;
+  border-radius: 8px;
   overflow: hidden;
   transition: all 0.3s ease;
 
@@ -179,7 +180,7 @@ const Badge = styled.span`
   color: ${({ theme }) => theme.colors.badgeText};
   font-size: 0.7rem;
   font-weight: 600;
-  border-radius: 10px;
+  border-radius: 8px;
   backdrop-filter: blur(10px);
   z-index: 2;
 `;
@@ -212,7 +213,7 @@ const AddButton = styled(motion.button)`
   width: 100%;
   padding: 10px;
   border: none;
-  border-radius: 14px;
+  border-radius: 8px;
   background: ${({ theme }) => theme.colors.primary};
   color: ${({ theme }) => theme.colors.textOnPrimary};
   font-size: 0.82rem;
@@ -247,14 +248,13 @@ const OrderPanel = styled.div`
   top: 90px;
   background: ${({ theme }) => theme.colors.cardBg};
   border: 1px solid ${({ theme }) => theme.colors.border};
-  border-radius: 22px;
+  border-radius: 8px;
   padding: 24px;
   max-height: calc(100vh - 110px);
   overflow-y: auto;
 
   @media (max-width: 900px) {
-    position: static;
-    border-radius: 20px;
+    display: none;
   }
 `;
 
@@ -375,7 +375,7 @@ const ClearCartBtn = styled(motion.button)`
   width: 100%;
   padding: 8px;
   border: 1px solid ${({ theme }) => theme.colors.border};
-  border-radius: 12px;
+  border-radius: 8px;
   background: transparent;
   color: ${({ theme }) => theme.colors.textMuted};
   font-size: 0.78rem;
@@ -442,7 +442,7 @@ const Label = styled.label`
 const Input = styled.input`
   width: 100%;
   padding: 10px 14px;
-  border-radius: 12px;
+  border-radius: 8px;
   border: 1px solid ${({ theme }) => theme.colors.inputBorder};
   background: ${({ theme }) => theme.colors.inputBg};
   color: ${({ theme }) => theme.colors.text};
@@ -464,7 +464,7 @@ const Input = styled.input`
 const TextArea = styled.textarea`
   width: 100%;
   padding: 10px 14px;
-  border-radius: 12px;
+  border-radius: 8px;
   border: 1px solid ${({ theme }) => theme.colors.inputBorder};
   background: ${({ theme }) => theme.colors.inputBg};
   color: ${({ theme }) => theme.colors.text};
@@ -521,7 +521,7 @@ const CheckoutButton = styled(motion.button)`
   width: 100%;
   padding: 14px;
   border: none;
-  border-radius: 16px;
+  border-radius: 10px;
   background: #25D366;
   color: #FFFFFF;
   font-size: 0.9rem;
@@ -554,7 +554,7 @@ const MobileCartButton = styled(motion.button)`
   right: 20px;
   width: 56px;
   height: 56px;
-  border-radius: 18px;
+  border-radius: 12px;
   border: none;
   background: ${({ theme }) => theme.colors.primary};
   color: ${({ theme }) => theme.colors.textOnPrimary};
@@ -604,7 +604,7 @@ const CartDrawer = styled(motion.div)`
   max-height: 85vh;
   background: ${({ theme }) => theme.colors.surface};
   z-index: 1501;
-  border-radius: 24px 24px 0 0;
+  border-radius: 16px 16px 0 0;
   padding: 24px;
   overflow-y: auto;
 `;
@@ -621,14 +621,14 @@ const DrawerHandle = styled.div`
 const SkeletonCard = styled.div`
   background: ${({ theme }) => theme.colors.cardBg};
   border: 1px solid ${({ theme }) => theme.colors.border};
-  border-radius: 20px;
+  border-radius: 8px;
   overflow: hidden;
 `;
 
 const ShippingInfoBox = styled.div`
   background: ${({ theme }) => theme.colors.badgeBg};
   border: 1px solid ${({ theme }) => theme.colors.border};
-  border-radius: 14px;
+  border-radius: 8px;
   padding: 14px 16px;
   margin-top: 14px;
   display: flex;
@@ -948,7 +948,7 @@ export default function KatalogPage() {
         </div>
 
         {/* Desktop order panel */}
-        <OrderPanel className="desktop-only" style={{ display: '' }}>
+        <OrderPanel>
           {renderCartContent()}
         </OrderPanel>
       </ContentWrapper>
