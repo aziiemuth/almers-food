@@ -312,6 +312,7 @@ export default function Navbar() {
             onClick={() => setMobileOpen(false)}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
+            aria-label="Tutup Menu"
           >
             <X size={18} />
           </CloseButton>

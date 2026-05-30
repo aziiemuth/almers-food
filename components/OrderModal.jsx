@@ -270,7 +270,7 @@ export default function OrderModal({ product, onClose }) {
           transition={{ type: 'spring', damping: 25 }}
           onClick={(e) => e.stopPropagation()}
         >
-          <CloseBtn onClick={onClose} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+          <CloseBtn onClick={onClose} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} aria-label="Tutup modal">
             <X size={18} />
           </CloseBtn>
 
@@ -322,6 +322,7 @@ export default function OrderModal({ product, onClose }) {
                   onClick={() => setQty(Math.max(1, qty - 1))}
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
+                  aria-label="Kurangi jumlah"
                 >
                   <Minus size={16} />
                 </QtyButton>
@@ -331,6 +332,7 @@ export default function OrderModal({ product, onClose }) {
                   onClick={() => setQty(qty + 1)}
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
+                  aria-label="Tambah jumlah"
                 >
                   <Plus size={16} />
                 </QtyButton>

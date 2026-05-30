@@ -751,6 +751,7 @@ export default function KatalogPage() {
                   <QtyBtn
                     onClick={() => decrementItem(item.productId, item.selectedVariant)}
                     whileTap={{ scale: 0.9 }}
+                    aria-label="Kurangi jumlah"
                   >
                     <Minus size={12} />
                   </QtyBtn>
@@ -758,12 +759,14 @@ export default function KatalogPage() {
                   <QtyBtn
                     onClick={() => incrementItem(item.productId, item.selectedVariant)}
                     whileTap={{ scale: 0.9 }}
+                    aria-label="Tambah jumlah"
                   >
                     <Plus size={12} />
                   </QtyBtn>
                   <DeleteBtn
                     onClick={() => deleteItem(item.productId, item.selectedVariant)}
                     whileTap={{ scale: 0.9 }}
+                    aria-label="Hapus dari pesanan"
                   >
                     <Trash2 size={14} />
                   </DeleteBtn>
@@ -959,6 +962,7 @@ export default function KatalogPage() {
           onClick={() => setMobileCartOpen(true)}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
+          aria-label="Buka Keranjang"
         >
           <ShoppingCart size={22} />
           <CartBadge>{items.reduce((s, i) => s + i.qty, 0)}</CartBadge>

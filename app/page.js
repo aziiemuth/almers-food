@@ -10,7 +10,9 @@ import { Autoplay, Pagination, EffectFade } from 'swiper/modules';
 import { Leaf, ChefHat, Truck, ThumbsUp, ShoppingBag } from 'lucide-react';
 import { FaStar, FaWhatsapp, FaQuoteLeft } from 'react-icons/fa';
 import AnimatedSection from '@/components/AnimatedSection';
-import OrderModal from '@/components/OrderModal';
+import dynamic from 'next/dynamic';
+
+const OrderModal = dynamic(() => import('@/components/OrderModal'), { ssr: false });
 import { products, featuredProductIds } from '@/data/products';
 import { formatRupiah } from '@/lib/formatRupiah';
 import 'swiper/css';
@@ -640,6 +642,7 @@ export default function HomePage() {
                   sizes="100vw"
                   style={{ objectFit: 'cover' }}
                   priority={i === 0}
+                  fetchPriority={i === 0 ? 'high' : 'auto'}
                 />
                 <HeroOverlay />
                 <HeroContent
