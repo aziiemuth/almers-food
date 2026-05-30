@@ -8,7 +8,7 @@ export default function JsonLd() {
         name: 'Almers Food Banyuwangi',
         alternateName: 'Almers Food',
         description:
-          'Almers Food adalah toko frozen food di Banyuwangi yang menyediakan berbagai produk makanan beku berkualitas dengan harga terjangkau. Kami menjual Roti Maryam, Pastel, Kroket, Samosa, dan aneka snack beku homemade yang higienis dan halal.',
+          'Dapatkan produk Frozen Food Sehat yang diproduksi secara homemade, higienis, dan bersertifikat Halal. Tersedia Roti Maryam, Pastel, Kroket, Samosa, dan aneka snack beku.',
         url: 'https://almersfood.web.id',
         telephone: '+6287806554701',
         image: [
@@ -94,7 +94,7 @@ export default function JsonLd() {
         url: 'https://almersfood.web.id',
         name: 'Almers Food Banyuwangi',
         description:
-          'Website resmi Almers Food — toko frozen food di Banyuwangi yang menyediakan produk makanan beku berkualitas dengan harga terjangkau.',
+          'Dapatkan produk Frozen Food Sehat yang diproduksi secara homemade, higienis, dan bersertifikat Halal.',
         publisher: {
           '@id': 'https://almersfood.web.id/#business',
         },

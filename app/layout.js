@@ -21,11 +21,11 @@ const playfair = Playfair_Display({
 export const metadata = {
   metadataBase: new URL('https://almersfood.web.id'),
   title: {
-    default: 'Almers Food Banyuwangi | Toko Frozen Food Terlengkap di Banyuwangi',
-    template: '%s | Almers Food Banyuwangi',
+    default: 'Almers Food - Official Store Almers Food Banyuwangi',
+    template: '%s | Almers Food',
   },
   description:
-    'Almers Food adalah toko frozen food di Banyuwangi yang menyediakan berbagai produk makanan beku berkualitas dengan harga terjangkau. Jual Roti Maryam, Pastel, Kroket, Samosa, dan aneka snack beku. Home made, higienis, halal, dan siap kirim ke seluruh Indonesia.',
+    'Dapatkan produk Frozen Food Sehat yang diproduksi secara homemade, higienis, dan bersertifikat Halal. Tersedia Roti Maryam, Pastel, Kroket, Samosa, dan aneka snack beku.',
   keywords: [
     'almers food',
     'almers food banyuwangi',
@@ -60,9 +60,9 @@ export const metadata = {
     apple: '/menu.svg',
   },
   openGraph: {
-    title: 'Almers Food Banyuwangi | Toko Frozen Food Terlengkap di Banyuwangi',
+    title: 'Almers Food - Official Store Almers Food Banyuwangi',
     description:
-      'Toko frozen food di Banyuwangi. Jual Roti Maryam, Pastel, Kroket, Samosa — homemade, higienis, harga terjangkau. Bisa kirim luar kota ke seluruh Indonesia.',
+      'Dapatkan produk Frozen Food Sehat yang diproduksi secara homemade, higienis, dan bersertifikat Halal. Tersedia Roti Maryam, Pastel, Kroket, Samosa, dan aneka snack beku.',
     url: 'https://almersfood.web.id',
     siteName: 'Almers Food Banyuwangi',
     locale: 'id_ID',
@@ -78,9 +78,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Almers Food Banyuwangi | Toko Frozen Food Terlengkap',
+    title: 'Almers Food - Official Store Almers Food',
     description:
-      'Toko frozen food di Banyuwangi. Roti Maryam, Pastel, Kroket, Samosa. Homemade, halal, harga terjangkau. Kirim ke seluruh Indonesia!',
+      'Dapatkan produk Frozen Food Sehat yang diproduksi secara homemade, higienis, dan bersertifikat Halal.',
     images: ['/foto/og-image.png'],
   },
   robots: {

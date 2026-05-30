@@ -1,7 +1,7 @@
 export const metadata = {
-  title: 'Katalog Frozen Food Banyuwangi | Harga Terbaik — Almers Food',
+  title: 'Produk',
   description:
-    'Lihat katalog lengkap frozen food Almers Food Banyuwangi. Daftar harga Roti Maryam, Pastel, Kroket, Samosa, Lumpur Kenari, dan Brota. Homemade, higienis, halal. Bisa kirim luar kota.',
+    'Katalog lengkap Almers Food. Keranjang · ALMERS ROTI MARYAM · ALMERS PASTEL · ALMERS KROKET · ALMERS SAMOSA · ALMERS LUMPUR KENARI dan aneka snack beku.',
   keywords: [
     'katalog frozen food banyuwangi',
     'harga frozen food banyuwangi',
@@ -16,9 +16,9 @@ export const metadata = {
     canonical: 'https://almersfood.web.id/katalog',
   },
   openGraph: {
-    title: 'Katalog Frozen Food Banyuwangi | Harga Terbaik Almers Food',
+    title: 'Produk - Almers Food Banyuwangi',
     description:
-      'Cek daftar harga dan menu frozen food Almers Food Banyuwangi. Roti Maryam, Pastel, Kroket, Samosa — homemade, higienis, halal.',
+      'Katalog lengkap Almers Food. Keranjang · ALMERS ROTI MARYAM · ALMERS PASTEL · ALMERS KROKET · ALMERS SAMOSA · ALMERS LUMPUR KENARI dan aneka snack beku.',
     url: 'https://almersfood.web.id/katalog',
     images: [
       {

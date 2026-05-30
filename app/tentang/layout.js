@@ -1,7 +1,7 @@
 export const metadata = {
-  title: 'Tentang Kami | Almers Food — Produsen Frozen Food Rumahan Banyuwangi',
+  title: 'Keunggulan & Cerita Kami',
   description:
-    'Kenali Almers Food, usaha frozen food rumahan di Banyuwangi yang berdiri dengan semangat menyajikan makanan beku berkualitas. Produk homemade, higienis, halal, dengan harga terjangkau. Melayani pengiriman ke seluruh Indonesia.',
+    'Kenali Almers Food Banyuwangi. Keunggulan Kami · 1. Dibuat Dengan Cinta · 2. Standar Higienis · 3. Rasa Premium · 4. Packaging Aman dan dikirim ke seluruh Indonesia.',
   keywords: [
     'tentang almers food',
     'almers food banyuwangi',
@@ -14,9 +14,9 @@ export const metadata = {
     canonical: 'https://almersfood.web.id/tentang',
   },
   openGraph: {
-    title: 'Tentang Almers Food — Frozen Food Rumahan Terbaik di Banyuwangi',
+    title: 'Keunggulan & Cerita Kami - Almers Food',
     description:
-      'Profil Almers Food: produsen frozen food homemade di Banyuwangi. Kami mengutamakan kualitas, kebersihan, dan rasa yang konsisten.',
+      'Kenali Almers Food Banyuwangi. Keunggulan Kami · 1. Dibuat Dengan Cinta · 2. Standar Higienis · 3. Rasa Premium · 4. Packaging Aman dan dikirim ke seluruh Indonesia.',
     url: 'https://almersfood.web.id/tentang',
     images: [
       {
