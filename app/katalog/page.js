@@ -85,18 +85,20 @@ const SearchBox = styled.div`
 const SearchInput = styled.input`
   width: 100%;
   padding: 12px 16px 12px 44px;
-  border-radius: 10px;
+  border-radius: 14px;
   border: 1px solid ${({ theme }) => theme.colors.inputBorder};
   background: ${({ theme }) => theme.colors.inputBg};
   color: ${({ theme }) => theme.colors.text};
   font-size: 0.9rem;
   font-family: 'Poppins', sans-serif;
   outline: none;
-  transition: border-color 0.3s ease;
+  transition: all 0.3s ease;
   box-sizing: border-box;
+  box-shadow: 0 2px 8px ${({ theme }) => theme.colors.shadow};
 
   &:focus {
     border-color: ${({ theme }) => theme.colors.primary};
+    box-shadow: 0 4px 12px ${({ theme }) => theme.colors.shadowMd};
   }
 
   &::placeholder {
@@ -119,20 +121,22 @@ const CategoryTabs = styled.div`
 `;
 
 const CategoryTab = styled(motion.button)`
-  padding: 8px 18px;
-  border-radius: 10px;
+  padding: 8px 20px;
+  border-radius: 24px;
   border: 1px solid ${({ theme, $active }) => ($active ? theme.colors.primary : theme.colors.border)};
   background: ${({ theme, $active }) => ($active ? theme.colors.primary : theme.colors.surface)};
   color: ${({ theme, $active }) => ($active ? theme.colors.textOnPrimary : theme.colors.text)};
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   font-weight: 500;
   font-family: 'Poppins', sans-serif;
   cursor: pointer;
   transition: all 0.3s ease;
+  box-shadow: ${({ $active, theme }) => ($active ? `0 4px 12px ${theme.colors.shadowMd}` : 'none')};
 
   &:hover {
     border-color: ${({ theme }) => theme.colors.primary};
     color: ${({ theme, $active }) => ($active ? theme.colors.textOnPrimary : theme.colors.primary)};
+    transform: translateY(-1px);
   }
 `;
 
@@ -152,14 +156,20 @@ const ProductGrid = styled.div`
 const ProductCard = styled(motion.div)`
   background: ${({ theme }) => theme.colors.cardBg};
   border: 1px solid ${({ theme }) => theme.colors.border};
-  border-radius: 8px;
+  border-radius: 16px;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  flex-direction: column;
 
   &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 35px ${({ theme }) => theme.colors.shadowMd};
-    border-color: ${({ theme }) => theme.colors.supporting};
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px ${({ theme }) => theme.colors.shadowMd};
+    border-color: ${({ theme }) => theme.colors.primary};
+
+    img {
+      transform: scale(1.08);
+    }
   }
 `;
 
@@ -169,20 +179,28 @@ const ProductImageWrapper = styled.div`
   aspect-ratio: 1 / 1;
   background: ${({ theme }) => theme.colors.borderLight};
   overflow: hidden;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.border};
+
+  img {
+    transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
 `;
 
 const Badge = styled.span`
   position: absolute;
-  top: 12px;
-  left: 12px;
-  padding: 4px 12px;
+  top: 14px;
+  left: 14px;
+  padding: 6px 14px;
   background: ${({ theme }) => theme.colors.badgeBg};
   color: ${({ theme }) => theme.colors.badgeText};
-  font-size: 0.7rem;
-  font-weight: 600;
-  border-radius: 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  border-radius: 20px;
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   z-index: 2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 `;
 
 const ProductInfo = styled.div`
@@ -211,23 +229,26 @@ const ProductPrice = styled.p`
 
 const AddButton = styled(motion.button)`
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   border: none;
-  border-radius: 8px;
+  border-radius: 12px;
   background: ${({ theme }) => theme.colors.primary};
   color: ${({ theme }) => theme.colors.textOnPrimary};
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   font-weight: 600;
   font-family: 'Poppins', sans-serif;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
-  transition: background 0.3s ease;
+  gap: 8px;
+  transition: all 0.3s ease;
+  margin-top: auto;
 
   &:hover {
     background: ${({ theme }) => theme.colors.secondary};
+    box-shadow: 0 6px 20px ${({ theme }) => theme.colors.shadow};
+    transform: translateY(-2px);
   }
 `;
 
@@ -248,10 +269,11 @@ const OrderPanel = styled.div`
   top: 90px;
   background: ${({ theme }) => theme.colors.cardBg};
   border: 1px solid ${({ theme }) => theme.colors.border};
-  border-radius: 8px;
+  border-radius: 16px;
   padding: 24px;
   max-height: calc(100vh - 110px);
   overflow-y: auto;
+  box-shadow: 0 10px 40px ${({ theme }) => theme.colors.shadow};
 
   @media (max-width: 900px) {
     display: none;
