@@ -33,8 +33,8 @@ const HeroBanner = styled.section`
   overflow: hidden;
 
   @media (max-width: 768px) {
-    padding: 80px 16px 60px;
-    min-height: 360px;
+    padding: 60px 16px 40px;
+    min-height: 300px;
   }
 `;
 
@@ -70,7 +70,8 @@ const PageTitle = styled.h1`
   line-height: 1.2;
 
   @media (max-width: 768px) {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
+    margin-bottom: 12px;
   }
 `;
 
@@ -79,6 +80,10 @@ const PageSubtitle = styled.p`
   opacity: 0.88;
   line-height: 1.8;
   font-family: 'Poppins', sans-serif;
+
+  @media (max-width: 768px) {
+    font-size: 0.95rem;
+  }
 `;
 
 /* ====== STATS BAR ====== */
@@ -111,6 +116,7 @@ const StatItem = styled(motion.div)`
   }
 
   @media (max-width: 768px) {
+    padding: 20px 16px;
     &:nth-child(2n) {
       border-right: none;
     }
@@ -131,6 +137,10 @@ const StatNumber = styled.div`
   background-clip: text;
   line-height: 1;
   margin-bottom: 6px;
+
+  @media (max-width: 768px) {
+    font-size: 1.8rem;
+  }
 `;
 
 const StatLabel = styled.p`
@@ -149,7 +159,7 @@ const Section = styled.section`
   margin: 0 auto;
 
   @media (max-width: 768px) {
-    padding: 56px 16px;
+    padding: 40px 16px;
   }
 `;
 
@@ -197,7 +207,7 @@ const StoryGrid = styled.div`
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 28px;
   }
 `;
 
@@ -326,6 +336,10 @@ const GlassSection = styled.section`
   background: ${({ theme }) => theme.colors.cardBg};
   border-top: 1px solid ${({ theme }) => theme.colors.border};
   border-bottom: 1px solid ${({ theme }) => theme.colors.border};
+
+  @media (max-width: 768px) {
+    padding: 40px 16px;
+  }
 `;
 
 const GlassInner = styled.div`
@@ -415,6 +429,10 @@ const ShippingSection = styled.section`
   padding: 80px 24px;
   max-width: 1100px;
   margin: 0 auto;
+
+  @media (max-width: 768px) {
+    padding: 40px 16px;
+  }
 `;
 
 const ShippingGrid = styled.div`
@@ -487,6 +505,10 @@ const CTASection = styled.section`
   text-align: center;
   position: relative;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    padding: 40px 16px;
+  }
 `;
 
 const CTAInner = styled(motion.div)`
@@ -544,6 +566,12 @@ const CTAButtons = styled.div`
   gap: 12px;
   justify-content: center;
   flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
 `;
 
 const CTAButton = styled(motion.a)`
@@ -564,9 +592,13 @@ const CTAButton = styled(motion.a)`
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
   }
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
-const KatalogButton = styled(motion(Link))`
+const KatalogButton = styled(motion.create(Link))`
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -585,6 +617,10 @@ const KatalogButton = styled(motion(Link))`
     background: ${({ theme }) => theme.colors.primary};
     color: ${({ theme }) => theme.colors.textOnPrimary};
     transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    justify-content: center;
   }
 `;
 

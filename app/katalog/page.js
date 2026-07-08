@@ -567,6 +567,10 @@ const MobileCartButton = styled(motion.button)`
   @media (max-width: 900px) {
     display: flex;
   }
+
+  @media (max-width: 768px) {
+    bottom: calc(100px + env(safe-area-inset-bottom));
+  }
 `;
 
 const CartBadge = styled.span`

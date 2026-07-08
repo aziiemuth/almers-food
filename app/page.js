@@ -89,7 +89,9 @@ const HeroTitle = styled.h1`
   text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
 
   @media (max-width: 768px) {
-    line-height: 1.12;
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 12px;
   }
 `;
 
@@ -101,9 +103,11 @@ const HeroSubtitle = styled.p`
   max-width: 560px;
 
   @media (max-width: 768px) {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    margin-bottom: 24px;
     margin-left: auto;
     margin-right: auto;
+    padding: 0 10px;
   }
 `;
 
@@ -114,7 +118,10 @@ const HeroCTAs = styled.div`
   flex-wrap: wrap;
 
   @media (max-width: 768px) {
-    justify-content: center;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 12px;
   }
 `;
 
@@ -138,9 +145,13 @@ const PrimaryButton = styled(motion.a)`
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35);
   }
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
-const SecondaryButton = styled(motion(Link))`
+const SecondaryButton = styled(motion.create(Link))`
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -160,6 +171,10 @@ const SecondaryButton = styled(motion(Link))`
     background: rgba(255, 255, 255, 0.25);
     transform: translateY(-2px);
   }
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
 /* ===== FEATURES ===== */
@@ -169,7 +184,7 @@ const Section = styled.section`
   margin: 0 auto;
 
   @media (max-width: 768px) {
-    padding: 50px 16px;
+    padding: 40px 16px;
   }
 `;
 
@@ -340,7 +355,7 @@ const WhySection = styled.section`
   border-bottom: 1px solid ${({ theme }) => theme.colors.border};
 
   @media (max-width: 768px) {
-    padding: 50px 16px;
+    padding: 40px 16px;
   }
 `;
 
@@ -426,7 +441,7 @@ const TestimonialsSection = styled.section`
   }
 
   @media (max-width: 768px) {
-    padding: 50px 16px;
+    padding: 40px 16px;
   }
 `;
 
@@ -437,7 +452,7 @@ const SeoSection = styled.section`
   margin: 0 auto;
 
   @media (max-width: 768px) {
-    padding: 50px 16px;
+    padding: 40px 16px;
   }
 `;
 
@@ -532,7 +547,7 @@ const ViewAllWrapper = styled.div`
   margin-top: 40px;
 `;
 
-const ViewAllButton = styled(motion(Link))`
+const ViewAllButton = styled(motion.create(Link))`
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -552,6 +567,11 @@ const ViewAllButton = styled(motion(Link))`
     color: ${({ theme }) => theme.colors.textOnPrimary};
     transform: translateY(-2px);
     box-shadow: 0 8px 25px ${({ theme }) => theme.colors.shadow};
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    justify-content: center;
   }
 `;
 
