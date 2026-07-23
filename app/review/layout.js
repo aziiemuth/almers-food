@@ -13,18 +13,29 @@ export const metadata = {
     canonical: 'https://almersfood.web.id/review',
   },
   openGraph: {
-    title: 'Review & Testimoni Pelanggan - Almers Food',
+    title: 'Review & Testimoni Pelanggan - Almers Food Banyuwangi',
     description:
-      'Ulasan jujur pelanggan Almers Food. "Pastelnya renyah, isian gurih..." - Kak Ayu. "Kroketnya lembut, creamy..." - Mas Budi. Baca testimoni selengkapnya.',
+      'Ulasan jujur pelanggan Almers Food Banyuwangi. Rasa lezat, higienis, halal, dan dipercaya pelanggan.',
     url: 'https://almersfood.web.id/review',
+    siteName: 'Almers Food Banyuwangi',
+    locale: 'id_ID',
+    type: 'website',
     images: [
       {
-        url: '/foto/og-image.png',
+        url: 'https://almersfood.web.id/foto/og-image.png',
         width: 1200,
         height: 630,
+        type: 'image/png',
         alt: 'Review Pelanggan Almers Food Banyuwangi',
       },
     ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Review & Testimoni Pelanggan - Almers Food Banyuwangi',
+    description:
+      'Ulasan jujur pelanggan Almers Food Banyuwangi. Rasa lezat, higienis, halal, dan dipercaya pelanggan.',
+    images: ['https://almersfood.web.id/foto/og-image.png'],
   },
 };
 

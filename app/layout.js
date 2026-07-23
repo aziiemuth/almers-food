@@ -21,7 +21,7 @@ const playfair = Playfair_Display({
 export const metadata = {
   metadataBase: new URL('https://almersfood.web.id'),
   title: {
-    default: 'Almers Food - Official Store Almers Food Banyuwangi',
+    default: 'Almers Food - Toko Frozen Food Terlengkap & Halal Banyuwangi',
     template: '%s | Almers Food',
   },
   description:
@@ -60,7 +60,7 @@ export const metadata = {
     apple: '/menu.svg',
   },
   openGraph: {
-    title: 'Almers Food - Official Store Almers Food Banyuwangi',
+    title: 'Almers Food - Toko Frozen Food Terlengkap & Halal Banyuwangi',
     description:
       'Dapatkan produk Frozen Food Sehat yang diproduksi secara homemade, higienis, dan bersertifikat Halal. Tersedia Roti Maryam, Pastel, Kroket, Samosa, dan aneka snack beku.',
     url: 'https://almersfood.web.id',
@@ -69,19 +69,20 @@ export const metadata = {
     type: 'website',
     images: [
       {
-        url: '/foto/og-image.png',
+        url: 'https://almersfood.web.id/foto/og-image.png',
         width: 1200,
         height: 630,
+        type: 'image/png',
         alt: 'Almers Food Banyuwangi - Toko Frozen Food Terlengkap di Banyuwangi',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Almers Food - Official Store Almers Food',
+    title: 'Almers Food - Toko Frozen Food Terlengkap & Halal Banyuwangi',
     description:
       'Dapatkan produk Frozen Food Sehat yang diproduksi secara homemade, higienis, dan bersertifikat Halal.',
-    images: ['/foto/og-image.png'],
+    images: ['https://almersfood.web.id/foto/og-image.png'],
   },
   robots: {
     index: true,

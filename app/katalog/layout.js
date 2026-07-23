@@ -1,7 +1,7 @@
 export const metadata = {
-  title: 'Produk',
+  title: 'Katalog Produk Frozen Food Homemade',
   description:
-    'Katalog lengkap Almers Food. Keranjang · ALMERS ROTI MARYAM · ALMERS PASTEL · ALMERS KROKET · ALMERS SAMOSA · ALMERS LUMPUR KENARI dan aneka snack beku.',
+    'Lihat daftar lengkap produk Almers Food Banyuwangi. Roti Maryam Coklat & Original, Pastel Renyah, Kroket Creamy, Samosa Gurih, dan Lumpur Kenari.',
   keywords: [
     'katalog frozen food banyuwangi',
     'harga frozen food banyuwangi',
@@ -16,18 +16,29 @@ export const metadata = {
     canonical: 'https://almersfood.web.id/katalog',
   },
   openGraph: {
-    title: 'Produk - Almers Food Banyuwangi',
+    title: 'Katalog Produk Frozen Food - Almers Food Banyuwangi',
     description:
-      'Katalog lengkap Almers Food. Keranjang · ALMERS ROTI MARYAM · ALMERS PASTEL · ALMERS KROKET · ALMERS SAMOSA · ALMERS LUMPUR KENARI dan aneka snack beku.',
+      'Lihat daftar lengkap produk Almers Food Banyuwangi. Roti Maryam Coklat & Original, Pastel Renyah, Kroket Creamy, Samosa Gurih, dan Lumpur Kenari.',
     url: 'https://almersfood.web.id/katalog',
+    siteName: 'Almers Food Banyuwangi',
+    locale: 'id_ID',
+    type: 'website',
     images: [
       {
-        url: '/foto/og-image.png',
+        url: 'https://almersfood.web.id/foto/og-image.png',
         width: 1200,
         height: 630,
+        type: 'image/png',
         alt: 'Katalog Frozen Food Almers Food Banyuwangi',
       },
     ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Katalog Produk Frozen Food - Almers Food Banyuwangi',
+    description:
+      'Lihat daftar lengkap produk Almers Food Banyuwangi. Roti Maryam, Pastel, Kroket, Samosa, dan Lumpur Kenari.',
+    images: ['https://almersfood.web.id/foto/og-image.png'],
   },
 };
 

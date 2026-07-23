@@ -121,7 +121,7 @@ export default function JsonLd() {
           {
             '@type': 'ListItem',
             position: 2,
-            name: 'Katalog Frozen Food',
+            name: 'Katalog Produk',
             item: 'https://almersfood.web.id/katalog',
           },
           {
@@ -135,6 +135,34 @@ export default function JsonLd() {
             position: 4,
             name: 'Tentang Kami',
             item: 'https://almersfood.web.id/tentang',
+          },
+        ],
+      },
+      {
+        '@type': 'ItemList',
+        '@id': 'https://almersfood.web.id/#sitelinks',
+        name: 'Navigasi Utam Almers Food',
+        itemListElement: [
+          {
+            '@type': 'SiteNavigationElement',
+            position: 1,
+            name: 'Katalog Produk Frozen Food',
+            description: 'Lihat daftar lengkap produk frozen food homemade Almers Food Banyuwangi, Roti Maryam, Pastel, Kroket, Samosa.',
+            url: 'https://almersfood.web.id/katalog',
+          },
+          {
+            '@type': 'SiteNavigationElement',
+            position: 2,
+            name: 'Review & Testimoni Pelanggan',
+            description: 'Baca ulasan jujur dan ulasan kepuasan pelanggan Almers Food Banyuwangi.',
+            url: 'https://almersfood.web.id/review',
+          },
+          {
+            '@type': 'SiteNavigationElement',
+            position: 3,
+            name: 'Tentang Almers Food',
+            description: 'Kenali profil usaha Almers Food Banyuwangi, standar kebersihan higienis, dan sertifikasi Halal.',
+            url: 'https://almersfood.web.id/tentang',
           },
         ],
       },
