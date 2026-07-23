@@ -25,16 +25,16 @@ export const metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://almersfood.web.id/foto/og-image.webp',
-        width: 1200,
-        height: 630,
-        type: 'image/webp',
-        alt: 'Katalog Frozen Food Almers Food Banyuwangi',
-      },
-      {
         url: 'https://almersfood.web.id/foto/og-image.jpg',
         width: 1200,
         height: 630,
+        type: 'image/jpeg',
+        alt: 'Katalog Frozen Food Almers Food Banyuwangi',
+      },
+      {
+        url: 'https://almersfood.web.id/foto/og-image-square.jpg',
+        width: 600,
+        height: 600,
         type: 'image/jpeg',
         alt: 'Katalog Frozen Food Almers Food Banyuwangi',
       },
@@ -45,7 +45,7 @@ export const metadata = {
     title: 'Katalog Produk Frozen Food - Almers Food Banyuwangi',
     description:
       'Lihat daftar lengkap produk Almers Food Banyuwangi. Roti Maryam, Pastel, Kroket, Samosa, dan Lumpur Kenari.',
-    images: ['https://almersfood.web.id/foto/og-image.webp'],
+    images: ['https://almersfood.web.id/foto/og-image.jpg'],
   },
 };
 
