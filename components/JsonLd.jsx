@@ -12,7 +12,8 @@ export default function JsonLd() {
         url: 'https://almersfood.web.id',
         telephone: '+6287806554701',
         image: [
-          'https://almersfood.web.id/foto/og-image.png',
+          'https://almersfood.web.id/foto/og-image.webp',
+          'https://almersfood.web.id/foto/og-image.jpg',
           'https://almersfood.web.id/foto/Background%20Slider%201.png',
         ],
         logo: {

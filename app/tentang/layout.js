@@ -23,10 +23,17 @@ export const metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://almersfood.web.id/foto/og-image.png',
+        url: 'https://almersfood.web.id/foto/og-image.webp',
         width: 1200,
         height: 630,
-        type: 'image/png',
+        type: 'image/webp',
+        alt: 'Tentang Almers Food Banyuwangi',
+      },
+      {
+        url: 'https://almersfood.web.id/foto/og-image.jpg',
+        width: 1200,
+        height: 630,
+        type: 'image/jpeg',
         alt: 'Tentang Almers Food Banyuwangi',
       },
     ],
@@ -36,7 +43,7 @@ export const metadata = {
     title: 'Tentang Kami - Almers Food Banyuwangi',
     description:
       'Kenali Almers Food Banyuwangi. Keunggulan Kami: Dibuat Secara Homemade dengan Cinta, Standar Higienis, Bersertifikat Halal, dan Rasa Premium.',
-    images: ['https://almersfood.web.id/foto/og-image.png'],
+    images: ['https://almersfood.web.id/foto/og-image.webp'],
   },
 };
 

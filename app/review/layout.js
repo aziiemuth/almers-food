@@ -22,10 +22,17 @@ export const metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://almersfood.web.id/foto/og-image.png',
+        url: 'https://almersfood.web.id/foto/og-image.webp',
         width: 1200,
         height: 630,
-        type: 'image/png',
+        type: 'image/webp',
+        alt: 'Review Pelanggan Almers Food Banyuwangi',
+      },
+      {
+        url: 'https://almersfood.web.id/foto/og-image.jpg',
+        width: 1200,
+        height: 630,
+        type: 'image/jpeg',
         alt: 'Review Pelanggan Almers Food Banyuwangi',
       },
     ],
@@ -35,7 +42,7 @@ export const metadata = {
     title: 'Review & Testimoni Pelanggan - Almers Food Banyuwangi',
     description:
       'Ulasan jujur pelanggan Almers Food Banyuwangi. Rasa lezat, higienis, halal, dan dipercaya pelanggan.',
-    images: ['https://almersfood.web.id/foto/og-image.png'],
+    images: ['https://almersfood.web.id/foto/og-image.webp'],
   },
 };
 

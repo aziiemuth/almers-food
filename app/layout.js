@@ -69,11 +69,18 @@ export const metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://almersfood.web.id/foto/og-image.png',
+        url: 'https://almersfood.web.id/foto/og-image.webp',
         width: 1200,
         height: 630,
-        type: 'image/png',
+        type: 'image/webp',
         alt: 'Almers Food Banyuwangi - Toko Frozen Food Terlengkap di Banyuwangi',
+      },
+      {
+        url: 'https://almersfood.web.id/foto/og-image.jpg',
+        width: 1200,
+        height: 630,
+        type: 'image/jpeg',
+        alt: 'Almers Food Banyuwangi',
       },
     ],
   },
@@ -82,7 +89,7 @@ export const metadata = {
     title: 'Almers Food - Toko Frozen Food Terlengkap & Halal Banyuwangi',
     description:
       'Dapatkan produk Frozen Food Sehat yang diproduksi secara homemade, higienis, dan bersertifikat Halal.',
-    images: ['https://almersfood.web.id/foto/og-image.png'],
+    images: ['https://almersfood.web.id/foto/og-image.webp'],
   },
   robots: {
     index: true,
